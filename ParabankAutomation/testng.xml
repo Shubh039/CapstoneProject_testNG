@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="ParabankAutomationSuite" verbose="1">
+
+    <test name="RegistrationTest">
+        <classes>
+            <class name="testcases.RegistrationTest"/>
+        </classes>
+    </test>
+
+    <test name="LoginTest">
+        <classes>
+            <class name="testcases.LoginTest"/>
+        </classes>
+    </test>
+    
+    <test name="OpenAccountTest">
+        <classes>
+            <class name="testcases.OpenAccountTest"/>
+        </classes>
+    </test>
+    
+    <test name="TransferFundsTest">
+        <classes>
+            <class name="testcases.TransferFundsTest"/>
+        </classes>
+    </test>
+    <test name="BillPaymentTest">
+        <classes>
+            <class name="testcases.BillPaymentTest"/>
+        </classes>
+    </test>
+
+</suite>

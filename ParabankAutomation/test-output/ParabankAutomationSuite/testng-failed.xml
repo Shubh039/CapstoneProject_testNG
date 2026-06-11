@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ParabankAutomationSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="RegistrationTest(failed)">
+    <classes>
+      <class name="testcases.RegistrationTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="TC01_testValidReg"/>
+        </methods>
+      </class> <!-- testcases.RegistrationTest -->
+    </classes>
+  </test> <!-- RegistrationTest(failed) -->
+  <test thread-count="5" name="OpenAccountTest(failed)">
+    <classes>
+      <class name="testcases.OpenAccountTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="TC01_testOpenAccount"/>
+          <include name="TC02_testOpenAccount"/>
+        </methods>
+      </class> <!-- testcases.OpenAccountTest -->
+    </classes>
+  </test> <!-- OpenAccountTest(failed) -->
+  <test thread-count="5" name="BillPaymentTest(failed)">
+    <classes>
+      <class name="testcases.BillPaymentTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testEmptyAmountField"/>
+          <include name="testMismatchedAccountNumbers"/>
+          <include name="testInvalidAmountLetters"/>
+          <include name="testEmptyPayeeName"/>
+        </methods>
+      </class> <!-- testcases.BillPaymentTest -->
+    </classes>
+  </test> <!-- BillPaymentTest(failed) -->
+</suite> <!-- Failed suite [ParabankAutomationSuite] -->

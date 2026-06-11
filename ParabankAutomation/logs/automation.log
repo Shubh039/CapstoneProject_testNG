@@ -1,0 +1,345 @@
+2026-06-12 02:17:57.096 [INFO ] [main] utilities.TestListener - ╔═══════════════════════════════════════════════════════════╗
+2026-06-12 02:17:57.103 [INFO ] [main] utilities.TestListener -       STARTING TEST SUITE: Negative Tests — All Modules
+2026-06-12 02:17:57.103 [INFO ] [main] utilities.TestListener - ╚═══════════════════════════════════════════════════════════╝
+2026-06-12 02:17:57.213 [INFO ] [main] utilities.ExtentReportsManager - ExtentReports initialized. Report will be saved to: reports/AutomationReport.html
+2026-06-12 02:17:57.240 [INFO ] [main] base.BaseTest - ====================================================
+2026-06-12 02:17:57.240 [INFO ] [main] base.BaseTest - Setting up browser: chrome
+2026-06-12 02:17:58.419 [INFO ] [main] base.BaseTest - Browser launched. URL: http://localhost:8081/parabank/index.htm?ConnType=JDBC
+2026-06-12 02:17:58.423 [INFO ] [main] utilities.TestListener - ▶ Starting test: bug_LoginWithInvalidCredentials — LOGIN NEGATIVE — Invalid credentials should show error
+2026-06-12 02:17:58.426 [INFO ] [main] testcases.NegativeTest - =================================================
+2026-06-12 02:17:58.426 [INFO ] [main] testcases.NegativeTest - STARTING NEGATIVE LOGIN TEST
+2026-06-12 02:17:58.426 [INFO ] [main] testcases.NegativeTest - Scenario: Invalid username and password
+2026-06-12 02:17:58.426 [INFO ] [main] testcases.NegativeTest - Username: wrongUser_xyz
+2026-06-12 02:17:58.427 [INFO ] [main] testcases.NegativeTest - Password Provided: true
+2026-06-12 02:17:58.427 [INFO ] [main] testcases.NegativeTest - =================================================
+2026-06-12 02:17:58.572 [INFO ] [main] testcases.NegativeTest - Attempting login with invalid credentials
+2026-06-12 02:18:09.511 [INFO ] [main] testcases.NegativeTest - Login attempt completed. ErrorShown=true, LoginWorked=false
+2026-06-12 02:18:09.511 [INFO ] [main] testcases.NegativeTest - ╔══════════════════════════════════════════════════════╗
+2026-06-12 02:18:09.511 [INFO ] [main] testcases.NegativeTest - ║              BUG EXECUTION OUTPUT                    ║
+2026-06-12 02:18:09.512 [INFO ] [main] testcases.NegativeTest - ╠══════════════════════════════════════════════════════╣
+2026-06-12 02:18:09.512 [INFO ] [main] testcases.NegativeTest - ║ Bug ID          : PB-L01
+2026-06-12 02:18:09.513 [INFO ] [main] testcases.NegativeTest - ║ Module          : Login
+2026-06-12 02:18:09.513 [INFO ] [main] testcases.NegativeTest - ║ Input Data      : Username = wrongUser_xyz, Password = ****
+2026-06-12 02:18:09.513 [INFO ] [main] testcases.NegativeTest - ║ Expected Result : Login should be rejected — error message shown
+2026-06-12 02:18:09.513 [INFO ] [main] testcases.NegativeTest - ║ Actual Result   : Error message displayed correctly
+2026-06-12 02:18:09.513 [INFO ] [main] testcases.NegativeTest - ║ Bug Status      : WORKING AS EXPECTED ✅
+2026-06-12 02:18:09.513 [INFO ] [main] testcases.NegativeTest - ╚══════════════════════════════════════════════════════╝
+2026-06-12 02:18:09.513 [INFO ] [main] testcases.NegativeTest - ✅ PB-L01 — Login: Working as expected
+2026-06-12 02:18:09.523 [INFO ] [main] testcases.NegativeTest - Completed negative login scenario: Invalid username and password
+2026-06-12 02:18:09.524 [INFO ] [main] utilities.TestListener - ✅ PASSED: bug_LoginWithInvalidCredentials
+2026-06-12 02:18:09.527 [INFO ] [main] base.BaseTest - TEST PASSED ✅ : bug_LoginWithInvalidCredentials
+2026-06-12 02:18:09.690 [INFO ] [main] base.BaseTest - Browser closed
+2026-06-12 02:18:09.690 [INFO ] [main] base.BaseTest - ====================================================
+
+2026-06-12 02:18:09.691 [INFO ] [main] base.BaseTest - ====================================================
+2026-06-12 02:18:09.691 [INFO ] [main] base.BaseTest - Setting up browser: chrome
+2026-06-12 02:18:10.384 [INFO ] [main] base.BaseTest - Browser launched. URL: http://localhost:8081/parabank/index.htm?ConnType=JDBC
+2026-06-12 02:18:10.386 [INFO ] [main] utilities.TestListener - ▶ Starting test: bug_LoginWithInvalidCredentials — LOGIN NEGATIVE — Invalid credentials should show error
+2026-06-12 02:18:10.387 [INFO ] [main] testcases.NegativeTest - =================================================
+2026-06-12 02:18:10.387 [INFO ] [main] testcases.NegativeTest - STARTING NEGATIVE LOGIN TEST
+2026-06-12 02:18:10.388 [INFO ] [main] testcases.NegativeTest - Scenario: Empty username and password
+2026-06-12 02:18:10.388 [INFO ] [main] testcases.NegativeTest - Username: [EMPTY]
+2026-06-12 02:18:10.388 [INFO ] [main] testcases.NegativeTest - Password Provided: false
+2026-06-12 02:18:10.388 [INFO ] [main] testcases.NegativeTest - =================================================
+2026-06-12 02:18:10.520 [INFO ] [main] testcases.NegativeTest - Attempting login with invalid credentials
+2026-06-12 02:18:30.965 [INFO ] [main] testcases.NegativeTest - Login attempt completed. ErrorShown=true, LoginWorked=false
+2026-06-12 02:18:30.965 [INFO ] [main] testcases.NegativeTest - ╔══════════════════════════════════════════════════════╗
+2026-06-12 02:18:30.965 [INFO ] [main] testcases.NegativeTest - ║              BUG EXECUTION OUTPUT                    ║
+2026-06-12 02:18:30.965 [INFO ] [main] testcases.NegativeTest - ╠══════════════════════════════════════════════════════╣
+2026-06-12 02:18:30.965 [INFO ] [main] testcases.NegativeTest - ║ Bug ID          : PB-L01
+2026-06-12 02:18:30.965 [INFO ] [main] testcases.NegativeTest - ║ Module          : Login
+2026-06-12 02:18:30.965 [INFO ] [main] testcases.NegativeTest - ║ Input Data      : Username = [EMPTY], Password = [EMPTY]
+2026-06-12 02:18:30.965 [INFO ] [main] testcases.NegativeTest - ║ Expected Result : Login should be rejected — error message shown
+2026-06-12 02:18:30.965 [INFO ] [main] testcases.NegativeTest - ║ Actual Result   : Error message displayed correctly
+2026-06-12 02:18:30.965 [INFO ] [main] testcases.NegativeTest - ║ Bug Status      : WORKING AS EXPECTED ✅
+2026-06-12 02:18:30.965 [INFO ] [main] testcases.NegativeTest - ╚══════════════════════════════════════════════════════╝
+2026-06-12 02:18:30.965 [INFO ] [main] testcases.NegativeTest - ✅ PB-L01 — Login: Working as expected
+2026-06-12 02:18:30.965 [INFO ] [main] testcases.NegativeTest - Completed negative login scenario: Empty username and password
+2026-06-12 02:18:30.966 [INFO ] [main] utilities.TestListener - ✅ PASSED: bug_LoginWithInvalidCredentials
+2026-06-12 02:18:30.967 [INFO ] [main] base.BaseTest - TEST PASSED ✅ : bug_LoginWithInvalidCredentials
+2026-06-12 02:18:31.193 [INFO ] [main] base.BaseTest - Browser closed
+2026-06-12 02:18:31.193 [INFO ] [main] base.BaseTest - ====================================================
+
+2026-06-12 02:18:31.193 [INFO ] [main] base.BaseTest - ====================================================
+2026-06-12 02:18:31.193 [INFO ] [main] base.BaseTest - Setting up browser: chrome
+2026-06-12 02:18:31.857 [INFO ] [main] base.BaseTest - Browser launched. URL: http://localhost:8081/parabank/index.htm?ConnType=JDBC
+2026-06-12 02:18:31.859 [INFO ] [main] utilities.TestListener - ▶ Starting test: bug_LoginWithInvalidCredentials — LOGIN NEGATIVE — Invalid credentials should show error
+2026-06-12 02:18:31.859 [INFO ] [main] testcases.NegativeTest - =================================================
+2026-06-12 02:18:31.859 [INFO ] [main] testcases.NegativeTest - STARTING NEGATIVE LOGIN TEST
+2026-06-12 02:18:31.859 [INFO ] [main] testcases.NegativeTest - Scenario: Valid username, wrong password
+2026-06-12 02:18:31.859 [INFO ] [main] testcases.NegativeTest - Username: Shubhs
+2026-06-12 02:18:31.860 [INFO ] [main] testcases.NegativeTest - Password Provided: true
+2026-06-12 02:18:31.860 [INFO ] [main] testcases.NegativeTest - =================================================
+2026-06-12 02:18:32.001 [INFO ] [main] testcases.NegativeTest - Attempting login with invalid credentials
+2026-06-12 02:18:42.898 [INFO ] [main] testcases.NegativeTest - Login attempt completed. ErrorShown=true, LoginWorked=false
+2026-06-12 02:18:42.899 [INFO ] [main] testcases.NegativeTest - ╔══════════════════════════════════════════════════════╗
+2026-06-12 02:18:42.899 [INFO ] [main] testcases.NegativeTest - ║              BUG EXECUTION OUTPUT                    ║
+2026-06-12 02:18:42.899 [INFO ] [main] testcases.NegativeTest - ╠══════════════════════════════════════════════════════╣
+2026-06-12 02:18:42.899 [INFO ] [main] testcases.NegativeTest - ║ Bug ID          : PB-L01
+2026-06-12 02:18:42.899 [INFO ] [main] testcases.NegativeTest - ║ Module          : Login
+2026-06-12 02:18:42.899 [INFO ] [main] testcases.NegativeTest - ║ Input Data      : Username = Shubhs, Password = ****
+2026-06-12 02:18:42.900 [INFO ] [main] testcases.NegativeTest - ║ Expected Result : Login should be rejected — error message shown
+2026-06-12 02:18:42.900 [INFO ] [main] testcases.NegativeTest - ║ Actual Result   : Error message displayed correctly
+2026-06-12 02:18:42.900 [INFO ] [main] testcases.NegativeTest - ║ Bug Status      : WORKING AS EXPECTED ✅
+2026-06-12 02:18:42.900 [INFO ] [main] testcases.NegativeTest - ╚══════════════════════════════════════════════════════╝
+2026-06-12 02:18:42.900 [INFO ] [main] testcases.NegativeTest - ✅ PB-L01 — Login: Working as expected
+2026-06-12 02:18:42.900 [INFO ] [main] testcases.NegativeTest - Completed negative login scenario: Valid username, wrong password
+2026-06-12 02:18:42.901 [INFO ] [main] utilities.TestListener - ✅ PASSED: bug_LoginWithInvalidCredentials
+2026-06-12 02:18:42.902 [INFO ] [main] base.BaseTest - TEST PASSED ✅ : bug_LoginWithInvalidCredentials
+2026-06-12 02:18:43.078 [INFO ] [main] base.BaseTest - Browser closed
+2026-06-12 02:18:43.078 [INFO ] [main] base.BaseTest - ====================================================
+
+2026-06-12 02:18:43.079 [INFO ] [main] base.BaseTest - ====================================================
+2026-06-12 02:18:43.080 [INFO ] [main] base.BaseTest - Setting up browser: chrome
+2026-06-12 02:18:43.754 [INFO ] [main] base.BaseTest - Browser launched. URL: http://localhost:8081/parabank/index.htm?ConnType=JDBC
+2026-06-12 02:18:43.756 [INFO ] [main] utilities.TestListener - ▶ Starting test: bug001_transferFundsAllowsNegativeAmount — PB-001 — Transfer with negative amount should be rejected
+2026-06-12 02:18:43.756 [INFO ] [main] testcases.NegativeTest - =================================================
+2026-06-12 02:18:43.757 [INFO ] [main] testcases.NegativeTest - STARTING TEST: PB-001
+2026-06-12 02:18:43.757 [INFO ] [main] testcases.NegativeTest - Scenario: Transfer with negative amount
+2026-06-12 02:18:43.757 [INFO ] [main] testcases.NegativeTest - =================================================
+2026-06-12 02:18:46.860 [INFO ] [main] testcases.NegativeTest - Attempting login for negative test user: demo1781210923757
+2026-06-12 02:18:47.225 [INFO ] [main] testcases.NegativeTest - Login result for negative test user [demo1781210923757]: SUCCESS
+2026-06-12 02:18:47.226 [INFO ] [main] testcases.NegativeTest - Negative test user logged in successfully: demo1781210923757
+2026-06-12 02:18:47.226 [INFO ] [main] testcases.NegativeTest - Navigating to Accounts Overview page
+2026-06-12 02:18:47.394 [INFO ] [main] testcases.NegativeTest - Creating additional SAVINGS account for transfer test
+2026-06-12 02:18:47.879 [INFO ] [main] testcases.NegativeTest - Source Account      : 15786
+2026-06-12 02:18:47.879 [INFO ] [main] testcases.NegativeTest - Destination Account : 15897
+2026-06-12 02:18:48.512 [INFO ] [main] testcases.NegativeTest - ╔══════════════════════════════════════════════════════╗
+2026-06-12 02:18:48.512 [INFO ] [main] testcases.NegativeTest - ║              BUG EXECUTION OUTPUT                    ║
+2026-06-12 02:18:48.512 [INFO ] [main] testcases.NegativeTest - ╠══════════════════════════════════════════════════════╣
+2026-06-12 02:18:48.512 [INFO ] [main] testcases.NegativeTest - ║ Bug ID          : PB-001
+2026-06-12 02:18:48.512 [INFO ] [main] testcases.NegativeTest - ║ Module          : Transfer Funds
+2026-06-12 02:18:48.512 [INFO ] [main] testcases.NegativeTest - ║ Input Data      : Amount = -100, From = 15786, To = 15897
+2026-06-12 02:18:48.512 [INFO ] [main] testcases.NegativeTest - ║ Expected Result : System should reject negative transfer amount
+2026-06-12 02:18:48.512 [INFO ] [main] testcases.NegativeTest - ║ Actual Result   : Transfer Complete! — BUG
+2026-06-12 02:18:48.512 [INFO ] [main] testcases.NegativeTest - ║ Bug Status      : BUG REPRODUCED ❌
+2026-06-12 02:18:48.512 [INFO ] [main] testcases.NegativeTest - ╚══════════════════════════════════════════════════════╝
+2026-06-12 02:18:48.512 [WARN ] [main] testcases.NegativeTest - DEFECT CONFIRMED — PB-001 in module: Transfer Funds
+2026-06-12 02:18:48.610 [INFO ] [main] utilities.ScreenShotUtils - Screenshot saved: screenshots/BUG REPRODUCED ❌_2026-06-12_02-18-48.png
+2026-06-12 02:18:48.700 [INFO ] [main] utilities.ScreenShotUtils - Screenshot captured as Base64 for ExtentReports
+2026-06-12 02:18:48.706 [INFO ] [main] testcases.NegativeTest - Logging out test user
+2026-06-12 02:18:48.826 [INFO ] [main] testcases.NegativeTest - Completed test: PB-001
+2026-06-12 02:18:48.827 [INFO ] [main] utilities.TestListener - ✅ PASSED: bug001_transferFundsAllowsNegativeAmount
+2026-06-12 02:18:48.829 [INFO ] [main] base.BaseTest - TEST PASSED ✅ : bug001_transferFundsAllowsNegativeAmount
+2026-06-12 02:18:49.057 [INFO ] [main] base.BaseTest - Browser closed
+2026-06-12 02:18:49.057 [INFO ] [main] base.BaseTest - ====================================================
+
+2026-06-12 02:18:49.058 [INFO ] [main] base.BaseTest - ====================================================
+2026-06-12 02:18:49.058 [INFO ] [main] base.BaseTest - Setting up browser: chrome
+2026-06-12 02:18:49.765 [INFO ] [main] base.BaseTest - Browser launched. URL: http://localhost:8081/parabank/index.htm?ConnType=JDBC
+2026-06-12 02:18:49.766 [INFO ] [main] utilities.TestListener - ▶ Starting test: bug002_billPaymentAllowsNegativeAmount — PB-002 — Bill payment with negative amount should be rejected
+2026-06-12 02:18:49.767 [INFO ] [main] testcases.NegativeTest - =================================================
+2026-06-12 02:18:49.767 [INFO ] [main] testcases.NegativeTest - STARTING TEST: PB-002
+2026-06-12 02:18:49.767 [INFO ] [main] testcases.NegativeTest - Scenario: Bill payment with negative amount
+2026-06-12 02:18:49.767 [INFO ] [main] testcases.NegativeTest - =================================================
+2026-06-12 02:18:51.325 [INFO ] [main] testcases.NegativeTest - Attempting login for negative test user: demo1781210929768
+2026-06-12 02:18:51.582 [INFO ] [main] testcases.NegativeTest - Login result for negative test user [demo1781210929768]: SUCCESS
+2026-06-12 02:18:51.582 [INFO ] [main] testcases.NegativeTest - Negative test user logged in successfully: demo1781210929768
+2026-06-12 02:18:51.582 [INFO ] [main] testcases.NegativeTest - Navigating to Accounts Overview page
+2026-06-12 02:18:51.736 [INFO ] [main] testcases.NegativeTest - Source Account: 16008
+2026-06-12 02:18:51.739 [INFO ] [main] testcases.NegativeTest - Navigating to Bill Payment page
+2026-06-12 02:18:52.256 [INFO ] [main] testcases.NegativeTest - ╔══════════════════════════════════════════════════════╗
+2026-06-12 02:18:52.257 [INFO ] [main] testcases.NegativeTest - ║              BUG EXECUTION OUTPUT                    ║
+2026-06-12 02:18:52.257 [INFO ] [main] testcases.NegativeTest - ╠══════════════════════════════════════════════════════╣
+2026-06-12 02:18:52.257 [INFO ] [main] testcases.NegativeTest - ║ Bug ID          : PB-002
+2026-06-12 02:18:52.257 [INFO ] [main] testcases.NegativeTest - ║ Module          : Bill Payment
+2026-06-12 02:18:52.257 [INFO ] [main] testcases.NegativeTest - ║ Input Data      : Payee = Shubhank, Amount = -100, From = 16008
+2026-06-12 02:18:52.257 [INFO ] [main] testcases.NegativeTest - ║ Expected Result : System should reject negative payment amount
+2026-06-12 02:18:52.257 [INFO ] [main] testcases.NegativeTest - ║ Actual Result   : Bill Payment Complete — BUG
+2026-06-12 02:18:52.257 [INFO ] [main] testcases.NegativeTest - ║ Bug Status      : BUG REPRODUCED ❌
+2026-06-12 02:18:52.257 [INFO ] [main] testcases.NegativeTest - ╚══════════════════════════════════════════════════════╝
+2026-06-12 02:18:52.257 [WARN ] [main] testcases.NegativeTest - DEFECT CONFIRMED — PB-002 in module: Bill Payment
+2026-06-12 02:18:52.337 [INFO ] [main] utilities.ScreenShotUtils - Screenshot saved: screenshots/BUG REPRODUCED ❌_2026-06-12_02-18-52.png
+2026-06-12 02:18:52.420 [INFO ] [main] utilities.ScreenShotUtils - Screenshot captured as Base64 for ExtentReports
+2026-06-12 02:18:52.421 [INFO ] [main] testcases.NegativeTest - Logging out test user
+2026-06-12 02:18:52.516 [INFO ] [main] testcases.NegativeTest - Completed test: PB-002
+2026-06-12 02:18:52.517 [INFO ] [main] utilities.TestListener - ✅ PASSED: bug002_billPaymentAllowsNegativeAmount
+2026-06-12 02:18:52.520 [INFO ] [main] base.BaseTest - TEST PASSED ✅ : bug002_billPaymentAllowsNegativeAmount
+2026-06-12 02:18:52.728 [INFO ] [main] base.BaseTest - Browser closed
+2026-06-12 02:18:52.728 [INFO ] [main] base.BaseTest - ====================================================
+
+2026-06-12 02:18:52.728 [INFO ] [main] base.BaseTest - ====================================================
+2026-06-12 02:18:52.729 [INFO ] [main] base.BaseTest - Setting up browser: chrome
+2026-06-12 02:18:53.421 [INFO ] [main] base.BaseTest - Browser launched. URL: http://localhost:8081/parabank/index.htm?ConnType=JDBC
+2026-06-12 02:18:53.423 [INFO ] [main] utilities.TestListener - ▶ Starting test: bug003_transferFundsAllowsSameSourceAndDestinationAccount — PB-003 — Transfer to same account should be rejected
+2026-06-12 02:18:53.423 [INFO ] [main] testcases.NegativeTest - =================================================
+2026-06-12 02:18:53.423 [INFO ] [main] testcases.NegativeTest - STARTING TEST: PB-003
+2026-06-12 02:18:53.423 [INFO ] [main] testcases.NegativeTest - Scenario: Transfer using same source and destination account
+2026-06-12 02:18:53.423 [INFO ] [main] testcases.NegativeTest - =================================================
+2026-06-12 02:18:54.844 [INFO ] [main] testcases.NegativeTest - Attempting login for negative test user: demo1781210933423
+2026-06-12 02:18:54.982 [INFO ] [main] testcases.NegativeTest - Login result for negative test user [demo1781210933423]: SUCCESS
+2026-06-12 02:18:54.982 [INFO ] [main] testcases.NegativeTest - Negative test user logged in successfully: demo1781210933423
+2026-06-12 02:18:54.982 [INFO ] [main] testcases.NegativeTest - Navigating to Accounts Overview page
+2026-06-12 02:18:55.110 [INFO ] [main] testcases.NegativeTest - Using account [16119] as both source and destination
+2026-06-12 02:18:55.111 [INFO ] [main] testcases.NegativeTest - Executing transfer. Amount=10, From=16119, To=16119
+2026-06-12 02:18:55.437 [INFO ] [main] testcases.NegativeTest - ╔══════════════════════════════════════════════════════╗
+2026-06-12 02:18:55.438 [INFO ] [main] testcases.NegativeTest - ║              BUG EXECUTION OUTPUT                    ║
+2026-06-12 02:18:55.438 [INFO ] [main] testcases.NegativeTest - ╠══════════════════════════════════════════════════════╣
+2026-06-12 02:18:55.438 [INFO ] [main] testcases.NegativeTest - ║ Bug ID          : PB-003
+2026-06-12 02:18:55.438 [INFO ] [main] testcases.NegativeTest - ║ Module          : Transfer Funds
+2026-06-12 02:18:55.438 [INFO ] [main] testcases.NegativeTest - ║ Input Data      : From Account = Same Account, To Account = Same Account, Amount = 10
+2026-06-12 02:18:55.438 [INFO ] [main] testcases.NegativeTest - ║ Expected Result : System should block same source and destination account transfer
+2026-06-12 02:18:55.438 [INFO ] [main] testcases.NegativeTest - ║ Actual Result   : Transfer Complete! — BUG
+2026-06-12 02:18:55.438 [INFO ] [main] testcases.NegativeTest - ║ Bug Status      : BUG REPRODUCED ❌
+2026-06-12 02:18:55.438 [INFO ] [main] testcases.NegativeTest - ╚══════════════════════════════════════════════════════╝
+2026-06-12 02:18:55.438 [WARN ] [main] testcases.NegativeTest - DEFECT CONFIRMED — PB-003 in module: Transfer Funds
+2026-06-12 02:18:55.521 [INFO ] [main] utilities.ScreenShotUtils - Screenshot saved: screenshots/BUG REPRODUCED ❌_2026-06-12_02-18-55.png
+2026-06-12 02:18:55.589 [INFO ] [main] utilities.ScreenShotUtils - Screenshot captured as Base64 for ExtentReports
+2026-06-12 02:18:55.589 [INFO ] [main] testcases.NegativeTest - Logging out test user
+2026-06-12 02:18:55.663 [INFO ] [main] testcases.NegativeTest - Completed test: PB-003
+2026-06-12 02:18:55.664 [INFO ] [main] utilities.TestListener - ✅ PASSED: bug003_transferFundsAllowsSameSourceAndDestinationAccount
+2026-06-12 02:18:55.668 [INFO ] [main] base.BaseTest - TEST PASSED ✅ : bug003_transferFundsAllowsSameSourceAndDestinationAccount
+2026-06-12 02:18:55.875 [INFO ] [main] base.BaseTest - Browser closed
+2026-06-12 02:18:55.875 [INFO ] [main] base.BaseTest - ====================================================
+
+2026-06-12 02:18:55.875 [INFO ] [main] base.BaseTest - ====================================================
+2026-06-12 02:18:55.876 [INFO ] [main] base.BaseTest - Setting up browser: chrome
+2026-06-12 02:18:56.550 [INFO ] [main] base.BaseTest - Browser launched. URL: http://localhost:8081/parabank/index.htm?ConnType=JDBC
+2026-06-12 02:18:56.552 [INFO ] [main] utilities.TestListener - ▶ Starting test: bug004_billPayAcceptsMismatchedAccountNumbers — PB-004 — Bill payment with mismatched accounts should be rejected
+2026-06-12 02:18:56.552 [INFO ] [main] testcases.NegativeTest - =================================================
+2026-06-12 02:18:56.552 [INFO ] [main] testcases.NegativeTest - STARTING TEST: PB-004
+2026-06-12 02:18:56.552 [INFO ] [main] testcases.NegativeTest - Scenario: Bill payment with mismatched account numbers
+2026-06-12 02:18:56.552 [INFO ] [main] testcases.NegativeTest - =================================================
+2026-06-12 02:18:57.803 [INFO ] [main] testcases.NegativeTest - Attempting login for negative test user: demo1781210936552
+2026-06-12 02:18:58.103 [INFO ] [main] testcases.NegativeTest - Login result for negative test user [demo1781210936552]: SUCCESS
+2026-06-12 02:18:58.105 [INFO ] [main] testcases.NegativeTest - Negative test user logged in successfully: demo1781210936552
+2026-06-12 02:18:58.105 [INFO ] [main] testcases.NegativeTest - Navigating to Accounts Overview page
+2026-06-12 02:18:58.255 [INFO ] [main] testcases.NegativeTest - Source Account: 16230
+2026-06-12 02:18:58.255 [INFO ] [main] testcases.NegativeTest - Navigating to Bill Payment page
+2026-06-12 02:18:58.359 [INFO ] [main] testcases.NegativeTest - Submitting bill payment with mismatched account numbers. AccountNumber=12345, VerifyAccountNumber=67890
+2026-06-12 02:19:13.827 [INFO ] [main] testcases.NegativeTest - ╔══════════════════════════════════════════════════════╗
+2026-06-12 02:19:13.827 [INFO ] [main] testcases.NegativeTest - ║              BUG EXECUTION OUTPUT                    ║
+2026-06-12 02:19:13.828 [INFO ] [main] testcases.NegativeTest - ╠══════════════════════════════════════════════════════╣
+2026-06-12 02:19:13.828 [INFO ] [main] testcases.NegativeTest - ║ Bug ID          : PB-004
+2026-06-12 02:19:13.828 [INFO ] [main] testcases.NegativeTest - ║ Module          : Bill Payment
+2026-06-12 02:19:13.828 [INFO ] [main] testcases.NegativeTest - ║ Input Data      : Account Number = 12345, Verify Account Number = 67890, Amount = 5
+2026-06-12 02:19:13.828 [INFO ] [main] testcases.NegativeTest - ║ Expected Result : System should reject mismatched account number and verify account number
+2026-06-12 02:19:13.828 [INFO ] [main] testcases.NegativeTest - ║ Actual Result   : Mismatch error shown, payment blocked — OK
+2026-06-12 02:19:13.828 [INFO ] [main] testcases.NegativeTest - ║ Bug Status      : WORKING AS EXPECTED ✅
+2026-06-12 02:19:13.828 [INFO ] [main] testcases.NegativeTest - ╚══════════════════════════════════════════════════════╝
+2026-06-12 02:19:13.828 [INFO ] [main] testcases.NegativeTest - ✅ PB-004 — Bill Payment: Working as expected
+2026-06-12 02:19:13.828 [INFO ] [main] testcases.NegativeTest - Logging out test user
+2026-06-12 02:19:13.939 [INFO ] [main] testcases.NegativeTest - Completed test: PB-004
+2026-06-12 02:19:13.939 [INFO ] [main] utilities.TestListener - ✅ PASSED: bug004_billPayAcceptsMismatchedAccountNumbers
+2026-06-12 02:19:13.942 [INFO ] [main] base.BaseTest - TEST PASSED ✅ : bug004_billPayAcceptsMismatchedAccountNumbers
+2026-06-12 02:19:14.130 [INFO ] [main] base.BaseTest - Browser closed
+2026-06-12 02:19:14.130 [INFO ] [main] base.BaseTest - ====================================================
+
+2026-06-12 02:19:14.131 [INFO ] [main] base.BaseTest - ====================================================
+2026-06-12 02:19:14.131 [INFO ] [main] base.BaseTest - Setting up browser: chrome
+2026-06-12 02:19:14.788 [INFO ] [main] base.BaseTest - Browser launched. URL: http://localhost:8081/parabank/index.htm?ConnType=JDBC
+2026-06-12 02:19:14.789 [INFO ] [main] utilities.TestListener - ▶ Starting test: bug005_transferFundsAllowsZeroAmount — PB-005 — Transfer with zero amount should be rejected
+2026-06-12 02:19:14.790 [INFO ] [main] testcases.NegativeTest - =================================================
+2026-06-12 02:19:14.790 [INFO ] [main] testcases.NegativeTest - STARTING TEST: PB-005
+2026-06-12 02:19:14.790 [INFO ] [main] testcases.NegativeTest - Scenario: Transfer with zero amount
+2026-06-12 02:19:14.790 [INFO ] [main] testcases.NegativeTest - =================================================
+2026-06-12 02:19:16.092 [INFO ] [main] testcases.NegativeTest - Attempting login for negative test user: demo1781210954790
+2026-06-12 02:19:16.236 [INFO ] [main] testcases.NegativeTest - Login result for negative test user [demo1781210954790]: SUCCESS
+2026-06-12 02:19:16.236 [INFO ] [main] testcases.NegativeTest - Negative test user logged in successfully: demo1781210954790
+2026-06-12 02:19:16.236 [INFO ] [main] testcases.NegativeTest - Navigating to Accounts Overview page
+2026-06-12 02:19:16.348 [INFO ] [main] testcases.NegativeTest - Creating additional SAVINGS account for transfer test
+2026-06-12 02:19:16.710 [INFO ] [main] testcases.NegativeTest - Source Account      : 16341
+2026-06-12 02:19:16.710 [INFO ] [main] testcases.NegativeTest - Destination Account : 16452
+2026-06-12 02:19:16.710 [INFO ] [main] testcases.NegativeTest - Executing transfer with Amount=0, From=16341, To=16452
+2026-06-12 02:19:17.048 [INFO ] [main] testcases.NegativeTest - ╔══════════════════════════════════════════════════════╗
+2026-06-12 02:19:17.048 [INFO ] [main] testcases.NegativeTest - ║              BUG EXECUTION OUTPUT                    ║
+2026-06-12 02:19:17.048 [INFO ] [main] testcases.NegativeTest - ╠══════════════════════════════════════════════════════╣
+2026-06-12 02:19:17.048 [INFO ] [main] testcases.NegativeTest - ║ Bug ID          : PB-005
+2026-06-12 02:19:17.048 [INFO ] [main] testcases.NegativeTest - ║ Module          : Transfer Funds
+2026-06-12 02:19:17.048 [INFO ] [main] testcases.NegativeTest - ║ Input Data      : Amount = 0, From = 16341, To = 16452
+2026-06-12 02:19:17.048 [INFO ] [main] testcases.NegativeTest - ║ Expected Result : System should reject zero amount transfer
+2026-06-12 02:19:17.048 [INFO ] [main] testcases.NegativeTest - ║ Actual Result   : Transfer Complete with $0 — BUG
+2026-06-12 02:19:17.048 [INFO ] [main] testcases.NegativeTest - ║ Bug Status      : BUG REPRODUCED ❌
+2026-06-12 02:19:17.049 [INFO ] [main] testcases.NegativeTest - ╚══════════════════════════════════════════════════════╝
+2026-06-12 02:19:17.049 [WARN ] [main] testcases.NegativeTest - DEFECT CONFIRMED — PB-005 in module: Transfer Funds
+2026-06-12 02:19:17.142 [INFO ] [main] utilities.ScreenShotUtils - Screenshot saved: screenshots/BUG REPRODUCED ❌_2026-06-12_02-19-17.png
+2026-06-12 02:19:17.225 [INFO ] [main] utilities.ScreenShotUtils - Screenshot captured as Base64 for ExtentReports
+2026-06-12 02:19:17.226 [INFO ] [main] testcases.NegativeTest - Logging out test user
+2026-06-12 02:19:17.346 [INFO ] [main] testcases.NegativeTest - Completed test: PB-005
+2026-06-12 02:19:17.346 [INFO ] [main] utilities.TestListener - ✅ PASSED: bug005_transferFundsAllowsZeroAmount
+2026-06-12 02:19:17.348 [INFO ] [main] base.BaseTest - TEST PASSED ✅ : bug005_transferFundsAllowsZeroAmount
+2026-06-12 02:19:17.511 [INFO ] [main] base.BaseTest - Browser closed
+2026-06-12 02:19:17.512 [INFO ] [main] base.BaseTest - ====================================================
+
+2026-06-12 02:19:17.513 [INFO ] [main] base.BaseTest - ====================================================
+2026-06-12 02:19:17.513 [INFO ] [main] base.BaseTest - Setting up browser: chrome
+2026-06-12 02:19:18.214 [INFO ] [main] base.BaseTest - Browser launched. URL: http://localhost:8081/parabank/index.htm?ConnType=JDBC
+2026-06-12 02:19:18.217 [INFO ] [main] utilities.TestListener - ▶ Starting test: bug006_loanApprovedWithNegativeDownPayment — PB-006 — Negative down payment should be rejected by system
+2026-06-12 02:19:18.217 [INFO ] [main] testcases.NegativeTest - =================================================
+2026-06-12 02:19:18.217 [INFO ] [main] testcases.NegativeTest - STARTING TEST: PB-006
+2026-06-12 02:19:18.217 [INFO ] [main] testcases.NegativeTest - Scenario: Loan approval with negative down payment
+2026-06-12 02:19:18.217 [INFO ] [main] testcases.NegativeTest - =================================================
+2026-06-12 02:19:19.475 [INFO ] [main] testcases.NegativeTest - Attempting login for negative test user: demo1781210958217
+2026-06-12 02:19:19.613 [INFO ] [main] testcases.NegativeTest - Login result for negative test user [demo1781210958217]: SUCCESS
+2026-06-12 02:19:19.613 [INFO ] [main] testcases.NegativeTest - Negative test user logged in successfully: demo1781210958217
+2026-06-12 02:19:19.613 [INFO ] [main] testcases.NegativeTest - Navigating to Accounts Overview page
+2026-06-12 02:19:19.751 [INFO ] [main] testcases.NegativeTest - Source Account: 16563
+2026-06-12 02:19:19.751 [INFO ] [main] testcases.NegativeTest - Balance Before: $515.5
+2026-06-12 02:19:19.751 [INFO ] [main] testcases.NegativeTest - Loan Amount: 1000
+2026-06-12 02:19:19.751 [INFO ] [main] testcases.NegativeTest - Down Payment: -10 (negative value)
+2026-06-12 02:19:19.752 [INFO ] [main] testcases.NegativeTest - Navigating to Request Loan page
+2026-06-12 02:19:19.840 [INFO ] [main] testcases.NegativeTest - Submitting loan request. LoanAmount=1000, DownPayment=-10, Account=16563
+2026-06-12 02:19:20.592 [INFO ] [main] testcases.NegativeTest - ╔══════════════════════════════════════════════════════╗
+2026-06-12 02:19:20.592 [INFO ] [main] testcases.NegativeTest - ║              BUG EXECUTION OUTPUT                    ║
+2026-06-12 02:19:20.592 [INFO ] [main] testcases.NegativeTest - ╠══════════════════════════════════════════════════════╣
+2026-06-12 02:19:20.592 [INFO ] [main] testcases.NegativeTest - ║ Bug ID          : PB-006
+2026-06-12 02:19:20.592 [INFO ] [main] testcases.NegativeTest - ║ Module          : Request Loan
+2026-06-12 02:19:20.592 [INFO ] [main] testcases.NegativeTest - ║ Input Data      : Loan Amount = 1000, Down Payment = -10, Account = 16563
+2026-06-12 02:19:20.592 [INFO ] [main] testcases.NegativeTest - ║ Expected Result : System should reject negative down payment with validation error
+2026-06-12 02:19:20.592 [INFO ] [main] testcases.NegativeTest - ║ Actual Result   : Loan Approved with negative down payment — BUG. Balance changed from $515.5 to $515.5
+2026-06-12 02:19:20.592 [INFO ] [main] testcases.NegativeTest - ║ Bug Status      : BUG REPRODUCED ❌
+2026-06-12 02:19:20.592 [INFO ] [main] testcases.NegativeTest - ╚══════════════════════════════════════════════════════╝
+2026-06-12 02:19:20.592 [WARN ] [main] testcases.NegativeTest - DEFECT CONFIRMED — PB-006 in module: Request Loan
+2026-06-12 02:19:20.665 [INFO ] [main] utilities.ScreenShotUtils - Screenshot saved: screenshots/BUG REPRODUCED ❌_2026-06-12_02-19-20.png
+2026-06-12 02:19:20.732 [INFO ] [main] utilities.ScreenShotUtils - Screenshot captured as Base64 for ExtentReports
+2026-06-12 02:19:20.733 [INFO ] [main] testcases.NegativeTest - Logging out test user
+2026-06-12 02:19:20.813 [INFO ] [main] testcases.NegativeTest - Completed test: PB-006
+2026-06-12 02:19:20.815 [INFO ] [main] utilities.TestListener - ✅ PASSED: bug006_loanApprovedWithNegativeDownPayment
+2026-06-12 02:19:20.817 [INFO ] [main] base.BaseTest - TEST PASSED ✅ : bug006_loanApprovedWithNegativeDownPayment
+2026-06-12 02:19:21.014 [INFO ] [main] base.BaseTest - Browser closed
+2026-06-12 02:19:21.014 [INFO ] [main] base.BaseTest - ====================================================
+
+2026-06-12 02:19:21.014 [INFO ] [main] base.BaseTest - ====================================================
+2026-06-12 02:19:21.014 [INFO ] [main] base.BaseTest - Setting up browser: chrome
+2026-06-12 02:19:21.609 [INFO ] [main] base.BaseTest - Browser launched. URL: http://localhost:8081/parabank/index.htm?ConnType=JDBC
+2026-06-12 02:19:21.610 [INFO ] [main] utilities.TestListener - ▶ Starting test: bug007_accountBalanceGoesNegativeAfterLoanDownPayment — PB-007 — Account balance should not go negative after loan down payment
+2026-06-12 02:19:21.610 [INFO ] [main] testcases.NegativeTest - =================================================
+2026-06-12 02:19:21.610 [INFO ] [main] testcases.NegativeTest - STARTING TEST: PB-007
+2026-06-12 02:19:21.610 [INFO ] [main] testcases.NegativeTest - Scenario: Loan down payment exceeds available balance
+2026-06-12 02:19:21.611 [INFO ] [main] testcases.NegativeTest - =================================================
+2026-06-12 02:19:22.822 [INFO ] [main] testcases.NegativeTest - Attempting login for negative test user: demo1781210961611
+2026-06-12 02:19:22.983 [INFO ] [main] testcases.NegativeTest - Login result for negative test user [demo1781210961611]: SUCCESS
+2026-06-12 02:19:22.983 [INFO ] [main] testcases.NegativeTest - Negative test user logged in successfully: demo1781210961611
+2026-06-12 02:19:22.983 [INFO ] [main] testcases.NegativeTest - Navigating to Accounts Overview page
+2026-06-12 02:19:23.129 [INFO ] [main] testcases.NegativeTest - Source Account: 16785
+2026-06-12 02:19:23.129 [INFO ] [main] testcases.NegativeTest - Balance Before: $515.5
+2026-06-12 02:19:23.129 [INFO ] [main] testcases.NegativeTest - Loan Amount: 1000
+2026-06-12 02:19:23.129 [INFO ] [main] testcases.NegativeTest - Down Payment: 600 (exceeds available balance)
+2026-06-12 02:19:23.129 [INFO ] [main] testcases.NegativeTest - Navigating to Request Loan page
+2026-06-12 02:19:23.218 [INFO ] [main] testcases.NegativeTest - Submitting loan request. LoanAmount=1000, DownPayment=600, Account=16785
+2026-06-12 02:19:23.492 [INFO ] [main] testcases.NegativeTest - Loan request completed. Denied=true, Status=Denied
+2026-06-12 02:19:23.584 [INFO ] [main] testcases.NegativeTest - Balance After: $515.5
+2026-06-12 02:19:23.584 [INFO ] [main] testcases.NegativeTest - Went Negative: false
+2026-06-12 02:19:23.584 [INFO ] [main] testcases.NegativeTest - ╔══════════════════════════════════════════════════════╗
+2026-06-12 02:19:23.584 [INFO ] [main] testcases.NegativeTest - ║              BUG EXECUTION OUTPUT                    ║
+2026-06-12 02:19:23.584 [INFO ] [main] testcases.NegativeTest - ╠══════════════════════════════════════════════════════╣
+2026-06-12 02:19:23.584 [INFO ] [main] testcases.NegativeTest - ║ Bug ID          : PB-007
+2026-06-12 02:19:23.584 [INFO ] [main] testcases.NegativeTest - ║ Module          : Request Loan
+2026-06-12 02:19:23.584 [INFO ] [main] testcases.NegativeTest - ║ Input Data      : Loan Amount = 1000, Down Payment = 600 (exceeds balance of $515.5)
+2026-06-12 02:19:23.584 [INFO ] [main] testcases.NegativeTest - ║ Expected Result : Loan should be denied — insufficient funds for down payment. Account balance must not go negative.
+2026-06-12 02:19:23.584 [INFO ] [main] testcases.NegativeTest - ║ Actual Result   : Loan correctly denied — balance protected
+2026-06-12 02:19:23.584 [INFO ] [main] testcases.NegativeTest - ║ Bug Status      : WORKING AS EXPECTED ✅
+2026-06-12 02:19:23.584 [INFO ] [main] testcases.NegativeTest - ╚══════════════════════════════════════════════════════╝
+2026-06-12 02:19:23.584 [INFO ] [main] testcases.NegativeTest - ✅ PB-007 — Request Loan: Working as expected
+2026-06-12 02:19:23.585 [INFO ] [main] testcases.NegativeTest - Logging out test user
+2026-06-12 02:19:23.653 [INFO ] [main] testcases.NegativeTest - Completed test: PB-007
+2026-06-12 02:19:23.655 [INFO ] [main] utilities.TestListener - ✅ PASSED: bug007_accountBalanceGoesNegativeAfterLoanDownPayment
+2026-06-12 02:19:23.661 [INFO ] [main] base.BaseTest - TEST PASSED ✅ : bug007_accountBalanceGoesNegativeAfterLoanDownPayment
+2026-06-12 02:19:23.849 [INFO ] [main] base.BaseTest - Browser closed
+2026-06-12 02:19:23.849 [INFO ] [main] base.BaseTest - ====================================================
+
+2026-06-12 02:19:23.850 [INFO ] [main] utilities.TestListener - ╔════════════════════════════════════════════════════════╗
+2026-06-12 02:19:23.850 [INFO ] [main] utilities.TestListener - ║     SUITE FINISHED                                     ║
+2026-06-12 02:19:23.850 [INFO ] [main] utilities.TestListener - ║     Passed : 10  Failed : 0  Skipped: 0                ║
+2026-06-12 02:19:23.850 [INFO ] [main] utilities.TestListener - ╚════════════════════════════════════════════════════════╝
+2026-06-12 02:19:24.087 [INFO ] [main] utilities.ExtentReportsManager - ExtentReports flushed. Open reports/AutomationReport.html to view.

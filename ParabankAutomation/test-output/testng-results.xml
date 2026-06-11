@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-06-12T02:17:57 IST" name="ParaBank Negative Testing Suite" finished-at="2026-06-12T02:19:23 IST" duration-ms="86759">
+    <groups>
+    </groups>
+    <test started-at="2026-06-12T02:17:57 IST" name="Negative Tests — All Modules" finished-at="2026-06-12T02:19:23 IST" duration-ms="86759">
+      <class name="testcases.NegativeTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:17:57 IST" name="setUp" finished-at="2026-06-12T02:17:58 IST" duration-ms="1184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="bug_LoginWithInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:17:58 IST" name="bug_LoginWithInvalidCredentials" description="LOGIN NEGATIVE — Invalid credentials should show error" data-provider="invalidLoginData" finished-at="2026-06-12T02:18:09 IST" duration-ms="11103" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[wrongUser_xyz]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrongPass_123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Invalid username and password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bug_LoginWithInvalidCredentials -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:18:09 IST" name="tearDown" finished-at="2026-06-12T02:18:09 IST" duration-ms="164" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=bug_LoginWithInvalidCredentials status=SUCCESS method=NegativeTest.bug_LoginWithInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.NegativeTest@7ce97ee5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:18:09 IST" name="setUp" finished-at="2026-06-12T02:18:10 IST" duration-ms="695" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="bug_LoginWithInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:18:10 IST" name="bug_LoginWithInvalidCredentials" description="LOGIN NEGATIVE — Invalid credentials should show error" data-provider="invalidLoginData" finished-at="2026-06-12T02:18:30 IST" duration-ms="20580" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Empty username and password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bug_LoginWithInvalidCredentials -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:18:30 IST" name="tearDown" finished-at="2026-06-12T02:18:31 IST" duration-ms="227" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=bug_LoginWithInvalidCredentials status=SUCCESS method=NegativeTest.bug_LoginWithInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.NegativeTest@7ce97ee5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:18:31 IST" name="setUp" finished-at="2026-06-12T02:18:31 IST" duration-ms="664" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="bug_LoginWithInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:18:31 IST" name="bug_LoginWithInvalidCredentials" description="LOGIN NEGATIVE — Invalid credentials should show error" data-provider="invalidLoginData" finished-at="2026-06-12T02:18:42 IST" duration-ms="11043" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Shubhs]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrongPass]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Valid username, wrong password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bug_LoginWithInvalidCredentials -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:18:42 IST" name="tearDown" finished-at="2026-06-12T02:18:43 IST" duration-ms="176" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=bug_LoginWithInvalidCredentials status=SUCCESS method=NegativeTest.bug_LoginWithInvalidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:testcases.NegativeTest@7ce97ee5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:18:43 IST" name="setUp" finished-at="2026-06-12T02:18:43 IST" duration-ms="675" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="bug001_transferFundsAllowsNegativeAmount()[pri:2, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:18:43 IST" name="bug001_transferFundsAllowsNegativeAmount" description="PB-001 — Transfer with negative amount should be rejected" finished-at="2026-06-12T02:18:48 IST" duration-ms="5071" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bug001_transferFundsAllowsNegativeAmount -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:18:48 IST" name="tearDown" finished-at="2026-06-12T02:18:49 IST" duration-ms="229" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=bug001_transferFundsAllowsNegativeAmount status=SUCCESS method=NegativeTest.bug001_transferFundsAllowsNegativeAmount()[pri:2, instance:testcases.NegativeTest@7ce97ee5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:18:49 IST" name="setUp" finished-at="2026-06-12T02:18:49 IST" duration-ms="708" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="bug002_billPaymentAllowsNegativeAmount()[pri:3, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:18:49 IST" name="bug002_billPaymentAllowsNegativeAmount" description="PB-002 — Bill payment with negative amount should be rejected" finished-at="2026-06-12T02:18:52 IST" duration-ms="2750" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bug002_billPaymentAllowsNegativeAmount -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:18:52 IST" name="tearDown" finished-at="2026-06-12T02:18:52 IST" duration-ms="209" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=bug002_billPaymentAllowsNegativeAmount status=SUCCESS method=NegativeTest.bug002_billPaymentAllowsNegativeAmount()[pri:3, instance:testcases.NegativeTest@7ce97ee5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:18:52 IST" name="setUp" finished-at="2026-06-12T02:18:53 IST" duration-ms="693" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="bug003_transferFundsAllowsSameSourceAndDestinationAccount()[pri:4, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:18:53 IST" name="bug003_transferFundsAllowsSameSourceAndDestinationAccount" description="PB-003 — Transfer to same account should be rejected" finished-at="2026-06-12T02:18:55 IST" duration-ms="2241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bug003_transferFundsAllowsSameSourceAndDestinationAccount -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:18:55 IST" name="tearDown" finished-at="2026-06-12T02:18:55 IST" duration-ms="207" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=bug003_transferFundsAllowsSameSourceAndDestinationAccount status=SUCCESS method=NegativeTest.bug003_transferFundsAllowsSameSourceAndDestinationAccount()[pri:4, instance:testcases.NegativeTest@7ce97ee5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:18:55 IST" name="setUp" finished-at="2026-06-12T02:18:56 IST" duration-ms="675" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="bug004_billPayAcceptsMismatchedAccountNumbers()[pri:5, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:18:56 IST" name="bug004_billPayAcceptsMismatchedAccountNumbers" description="PB-004 — Bill payment with mismatched accounts should be rejected" finished-at="2026-06-12T02:19:13 IST" duration-ms="17389" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bug004_billPayAcceptsMismatchedAccountNumbers -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:19:13 IST" name="tearDown" finished-at="2026-06-12T02:19:14 IST" duration-ms="189" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=bug004_billPayAcceptsMismatchedAccountNumbers status=SUCCESS method=NegativeTest.bug004_billPayAcceptsMismatchedAccountNumbers()[pri:5, instance:testcases.NegativeTest@7ce97ee5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:19:14 IST" name="setUp" finished-at="2026-06-12T02:19:14 IST" duration-ms="657" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="bug005_transferFundsAllowsZeroAmount()[pri:6, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:19:14 IST" name="bug005_transferFundsAllowsZeroAmount" description="PB-005 — Transfer with zero amount should be rejected" finished-at="2026-06-12T02:19:17 IST" duration-ms="2557" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bug005_transferFundsAllowsZeroAmount -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:19:17 IST" name="tearDown" finished-at="2026-06-12T02:19:17 IST" duration-ms="165" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=bug005_transferFundsAllowsZeroAmount status=SUCCESS method=NegativeTest.bug005_transferFundsAllowsZeroAmount()[pri:6, instance:testcases.NegativeTest@7ce97ee5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:19:17 IST" name="setUp" finished-at="2026-06-12T02:19:18 IST" duration-ms="701" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="bug006_loanApprovedWithNegativeDownPayment()[pri:7, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:19:18 IST" name="bug006_loanApprovedWithNegativeDownPayment" description="PB-006 — Negative down payment should be rejected by system" finished-at="2026-06-12T02:19:20 IST" duration-ms="2597" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bug006_loanApprovedWithNegativeDownPayment -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:19:20 IST" name="tearDown" finished-at="2026-06-12T02:19:21 IST" duration-ms="199" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=bug006_loanApprovedWithNegativeDownPayment status=SUCCESS method=NegativeTest.bug006_loanApprovedWithNegativeDownPayment()[pri:7, instance:testcases.NegativeTest@7ce97ee5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:19:21 IST" name="setUp" finished-at="2026-06-12T02:19:21 IST" duration-ms="595" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="bug007_accountBalanceGoesNegativeAfterLoanDownPayment()[pri:8, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:19:21 IST" name="bug007_accountBalanceGoesNegativeAfterLoanDownPayment" description="PB-007 — Account balance should not go negative after loan down payment" finished-at="2026-06-12T02:19:23 IST" duration-ms="2044" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bug007_accountBalanceGoesNegativeAfterLoanDownPayment -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testcases.NegativeTest@7ce97ee5]" started-at="2026-06-12T02:19:23 IST" name="tearDown" finished-at="2026-06-12T02:19:23 IST" duration-ms="189" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=bug007_accountBalanceGoesNegativeAfterLoanDownPayment status=SUCCESS method=NegativeTest.bug007_accountBalanceGoesNegativeAfterLoanDownPayment()[pri:8, instance:testcases.NegativeTest@7ce97ee5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testcases.NegativeTest -->
+    </test> <!-- Negative Tests — All Modules -->
+  </suite> <!-- ParaBank Negative Testing Suite -->
+</testng-results>
