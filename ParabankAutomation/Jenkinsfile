@@ -16,27 +16,29 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'mvn clean install -DskipTests'
+                dir('ParabankAutomation') {
+                    bat 'mvn clean install -DskipTests'
+                }
             }
         }
 
         stage('Run Negative Tests') {
             steps {
-                bat 'mvn test -Dsurefire.suiteXmlFiles=testng-negative.xml'
+                dir('ParabankAutomation') {
+                    bat 'mvn test -Dsurefire.suiteXmlFiles=testng-negative.xml'
+                }
             }
         }
 
-
         stage('Archive Reports') {
             steps {
-
-                archiveArtifacts artifacts: 'reports/**/*',
+                archiveArtifacts artifacts: 'ParabankAutomation/reports/**/*',
                                  allowEmptyArchive: true
 
-                archiveArtifacts artifacts: 'screenshots/**/*',
+                archiveArtifacts artifacts: 'ParabankAutomation/screenshots/**/*',
                                  allowEmptyArchive: true
 
-                archiveArtifacts artifacts: 'logs/**/*',
+                archiveArtifacts artifacts: 'ParabankAutomation/logs/**/*',
                                  allowEmptyArchive: true
             }
         }
@@ -46,7 +48,7 @@ pipeline {
 
         always {
             junit allowEmptyResults: true,
-                  testResults: '**/target/surefire-reports/*.xml'
+                  testResults: 'ParabankAutomation/**/target/surefire-reports/*.xml'
         }
 
         success {
