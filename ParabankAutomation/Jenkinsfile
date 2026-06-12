@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'master',
-                    url: 'https://github.com/Shubh039/CapstoneProject_testNGL'
+                    url: 'https://github.com/Shubh039/CapstoneProject_testNG'
             }
         }
 
