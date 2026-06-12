@@ -1,0 +1,60 @@
+pipeline {
+    agent any
+
+    tools {
+        maven 'Maven3'
+    }
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                git branch: 'master',
+                    url: 'https://github.com/Shubh039/CapstoneProject_testNGL'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                bat 'mvn clean install -DskipTests'
+            }
+        }
+
+        stage('Run Negative Tests') {
+            steps {
+                bat 'mvn test -Dsurefire.suiteXmlFiles=testng-negative.xml'
+            }
+        }
+
+
+        stage('Archive Reports') {
+            steps {
+
+                archiveArtifacts artifacts: 'reports/**/*',
+                                 allowEmptyArchive: true
+
+                archiveArtifacts artifacts: 'screenshots/**/*',
+                                 allowEmptyArchive: true
+
+                archiveArtifacts artifacts: 'logs/**/*',
+                                 allowEmptyArchive: true
+            }
+        }
+    }
+
+    post {
+
+        always {
+            junit allowEmptyResults: true,
+                  testResults: '**/target/surefire-reports/*.xml'
+        }
+
+        success {
+            echo 'Build Successful'
+        }
+
+        failure {
+            echo 'Build Failed'
+        }
+    }
+}
