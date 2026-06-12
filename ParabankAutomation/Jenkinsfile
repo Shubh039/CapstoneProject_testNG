@@ -70,9 +70,10 @@ pipeline {
                                  allowEmptyArchive: true
                 echo '✅ Reports archived'
             }
-    }
-
-    post {
+    	}
+	}
+    
+	post {
         always {
             echo '======== Cleanup ========'
             bat '''
@@ -89,5 +90,5 @@ pipeline {
         failure {
             echo '❌ BUILD FAILED — Check Console Output'
         }
-    }
+	}
 }
