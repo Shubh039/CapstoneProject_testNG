@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 9 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-ParaBank_Negative_Testing_Suite" class="navigator-link">
-              <span class="suite-name border-passed">ParaBank Negative Testing Suite</span>
+              <span class="suite-name border-failed">ParaBank Negative Testing Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-ParaBank_Negative_Testing_Suite" class="navigator-link ">
-                    <span>C:\Users\Shubhank\eclipse-workspace\ParabankAutomation\testng-negative.xml</span>
+                    <span>D:\CapstoneProject_testNG\ParabankAutomation\testng-negative.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,61 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods,   10 passed</span>
+                    <span class="method-stats">10 methods, 9 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-ParaBank_Negative_Testing_Suite" class="hide-methods failed suite-ParaBank_Negative_Testing_Suite"> (hide)</a> <!-- hide-methods failed suite-ParaBank_Negative_Testing_Suite -->
+                      <a href="#" panel-name="suite-ParaBank_Negative_Testing_Suite" class="show-methods failed suite-ParaBank_Negative_Testing_Suite"> (show)</a> <!-- show-methods failed suite-ParaBank_Negative_Testing_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-ParaBank_Negative_Testing_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ParaBank_Negative_Testing_Suite" title="testcases.NegativeTest" class="method navigator-link" hash-for-method="bug001_transferFundsAllowsNegativeAmount">bug001_transferFundsAllowsNegativeAmount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ParaBank_Negative_Testing_Suite" title="testcases.NegativeTest" class="method navigator-link" hash-for-method="bug002_billPaymentAllowsNegativeAmount">bug002_billPaymentAllowsNegativeAmount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ParaBank_Negative_Testing_Suite" title="testcases.NegativeTest" class="method navigator-link" hash-for-method="bug003_transferFundsAllowsSameSourceAndDestinationAccount">bug003_transferFundsAllowsSameSourceAndDestinationAccount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ParaBank_Negative_Testing_Suite" title="testcases.NegativeTest" class="method navigator-link" hash-for-method="bug004_billPayAcceptsMismatchedAccountNumbers">bug004_billPayAcceptsMismatchedAccountNumbers</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ParaBank_Negative_Testing_Suite" title="testcases.NegativeTest" class="method navigator-link" hash-for-method="bug005_transferFundsAllowsZeroAmount">bug005_transferFundsAllowsZeroAmount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ParaBank_Negative_Testing_Suite" title="testcases.NegativeTest" class="method navigator-link" hash-for-method="bug006_loanApprovedWithNegativeDownPayment">bug006_loanApprovedWithNegativeDownPayment</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ParaBank_Negative_Testing_Suite" title="testcases.NegativeTest" class="method navigator-link" hash-for-method="bug007_accountBalanceGoesNegativeAfterLoanDownPayment">bug007_accountBalanceGoesNegativeAfterLoanDownPayment</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ParaBank_Negative_Testing_Suite" title="testcases.NegativeTest" class="method navigator-link" hash-for-method="bug_LoginWithInvalidCredentials(wrongUser_xyz, wrongPass_123, Invalid username and password)">bug_LoginWithInvalidCredentials(wrongUser_xyz, wrongPass_123, Invalid username and password)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ParaBank_Negative_Testing_Suite" title="testcases.NegativeTest" class="method navigator-link" hash-for-method="bug_LoginWithInvalidCredentials(Shubhs, wrongPass, Valid username, wrong password)">bug_LoginWithInvalidCredentials(Shubhs, wrongPass, Valid username, wrong password)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-ParaBank_Negative_Testing_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,52 +157,7 @@
                     <div class="method-list-content passed suite-ParaBank_Negative_Testing_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-ParaBank_Negative_Testing_Suite" title="testcases.NegativeTest" class="method navigator-link" hash-for-method="bug001_transferFundsAllowsNegativeAmount">bug001_transferFundsAllowsNegativeAmount</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-ParaBank_Negative_Testing_Suite" title="testcases.NegativeTest" class="method navigator-link" hash-for-method="bug002_billPaymentAllowsNegativeAmount">bug002_billPaymentAllowsNegativeAmount</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-ParaBank_Negative_Testing_Suite" title="testcases.NegativeTest" class="method navigator-link" hash-for-method="bug003_transferFundsAllowsSameSourceAndDestinationAccount">bug003_transferFundsAllowsSameSourceAndDestinationAccount</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-ParaBank_Negative_Testing_Suite" title="testcases.NegativeTest" class="method navigator-link" hash-for-method="bug004_billPayAcceptsMismatchedAccountNumbers">bug004_billPayAcceptsMismatchedAccountNumbers</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-ParaBank_Negative_Testing_Suite" title="testcases.NegativeTest" class="method navigator-link" hash-for-method="bug005_transferFundsAllowsZeroAmount">bug005_transferFundsAllowsZeroAmount</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-ParaBank_Negative_Testing_Suite" title="testcases.NegativeTest" class="method navigator-link" hash-for-method="bug006_loanApprovedWithNegativeDownPayment">bug006_loanApprovedWithNegativeDownPayment</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-ParaBank_Negative_Testing_Suite" title="testcases.NegativeTest" class="method navigator-link" hash-for-method="bug007_accountBalanceGoesNegativeAfterLoanDownPayment">bug007_accountBalanceGoesNegativeAfterLoanDownPayment</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-ParaBank_Negative_Testing_Suite" title="testcases.NegativeTest" class="method navigator-link" hash-for-method="bug_LoginWithInvalidCredentials(, , Empty username and password)">bug_LoginWithInvalidCredentials(, , Empty username and password)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-ParaBank_Negative_Testing_Suite" title="testcases.NegativeTest" class="method navigator-link" hash-for-method="bug_LoginWithInvalidCredentials(Shubhs, wrongPass, Valid username, wrong password)">bug_LoginWithInvalidCredentials(Shubhs, wrongPass, Valid username, wrong password)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-ParaBank_Negative_Testing_Suite" title="testcases.NegativeTest" class="method navigator-link" hash-for-method="bug_LoginWithInvalidCredentials(wrongUser_xyz, wrongPass_123, Invalid username and password)">bug_LoginWithInvalidCredentials(wrongUser_xyz, wrongPass_123, Invalid username and password)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-ParaBank_Negative_Testing_Suite -->
@@ -163,9 +172,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-ParaBank_Negative_Testing_Suite" class="panel ParaBank_Negative_Testing_Suite">
-          <div class="suite-ParaBank_Negative_Testing_Suite-class-passed">
+          <div class="suite-ParaBank_Negative_Testing_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">testcases.NegativeTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -174,6 +183,12 @@
                   <a name="bug001_transferFundsAllowsNegativeAmount">
                   </a> <!-- bug001_transferFundsAllowsNegativeAmount -->
                   <span class="method-name">bug001_transferFundsAllowsNegativeAmount</span>
+                  <div class="stack-trace">java.lang.AssertionError: Login failed for negative test user expected [true] but found [false]
+	at testcases.NegativeTest.loginNegativeUser(NegativeTest.java:114)
+	at testcases.NegativeTest.bug001_transferFundsAllowsNegativeAmount(NegativeTest.java:190)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (PB-001 — Transfer with negative amount should be rejected)                  </em>
                 </div> <!-- method-content -->
@@ -183,6 +198,12 @@
                   <a name="bug002_billPaymentAllowsNegativeAmount">
                   </a> <!-- bug002_billPaymentAllowsNegativeAmount -->
                   <span class="method-name">bug002_billPaymentAllowsNegativeAmount</span>
+                  <div class="stack-trace">java.lang.AssertionError: Login failed for negative test user expected [true] but found [false]
+	at testcases.NegativeTest.loginNegativeUser(NegativeTest.java:114)
+	at testcases.NegativeTest.bug002_billPaymentAllowsNegativeAmount(NegativeTest.java:239)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (PB-002 — Bill payment with negative amount should be rejected)                  </em>
                 </div> <!-- method-content -->
@@ -192,6 +213,12 @@
                   <a name="bug003_transferFundsAllowsSameSourceAndDestinationAccount">
                   </a> <!-- bug003_transferFundsAllowsSameSourceAndDestinationAccount -->
                   <span class="method-name">bug003_transferFundsAllowsSameSourceAndDestinationAccount</span>
+                  <div class="stack-trace">java.lang.AssertionError: Login failed for negative test user expected [true] but found [false]
+	at testcases.NegativeTest.loginNegativeUser(NegativeTest.java:114)
+	at testcases.NegativeTest.bug003_transferFundsAllowsSameSourceAndDestinationAccount(NegativeTest.java:290)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (PB-003 — Transfer to same account should be rejected)                  </em>
                 </div> <!-- method-content -->
@@ -201,6 +228,12 @@
                   <a name="bug004_billPayAcceptsMismatchedAccountNumbers">
                   </a> <!-- bug004_billPayAcceptsMismatchedAccountNumbers -->
                   <span class="method-name">bug004_billPayAcceptsMismatchedAccountNumbers</span>
+                  <div class="stack-trace">java.lang.AssertionError: Login failed for negative test user expected [true] but found [false]
+	at testcases.NegativeTest.loginNegativeUser(NegativeTest.java:114)
+	at testcases.NegativeTest.bug004_billPayAcceptsMismatchedAccountNumbers(NegativeTest.java:335)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (PB-004 — Bill payment with mismatched accounts should be rejected)                  </em>
                 </div> <!-- method-content -->
@@ -210,6 +243,12 @@
                   <a name="bug005_transferFundsAllowsZeroAmount">
                   </a> <!-- bug005_transferFundsAllowsZeroAmount -->
                   <span class="method-name">bug005_transferFundsAllowsZeroAmount</span>
+                  <div class="stack-trace">java.lang.AssertionError: Login failed for negative test user expected [true] but found [false]
+	at testcases.NegativeTest.loginNegativeUser(NegativeTest.java:114)
+	at testcases.NegativeTest.bug005_transferFundsAllowsZeroAmount(NegativeTest.java:393)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (PB-005 — Transfer with zero amount should be rejected)                  </em>
                 </div> <!-- method-content -->
@@ -219,6 +258,12 @@
                   <a name="bug006_loanApprovedWithNegativeDownPayment">
                   </a> <!-- bug006_loanApprovedWithNegativeDownPayment -->
                   <span class="method-name">bug006_loanApprovedWithNegativeDownPayment</span>
+                  <div class="stack-trace">java.lang.AssertionError: Login failed for negative test user expected [true] but found [false]
+	at testcases.NegativeTest.loginNegativeUser(NegativeTest.java:114)
+	at testcases.NegativeTest.bug006_loanApprovedWithNegativeDownPayment(NegativeTest.java:452)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (PB-006 — Negative down payment should be rejected by system)                  </em>
                 </div> <!-- method-content -->
@@ -228,16 +273,28 @@
                   <a name="bug007_accountBalanceGoesNegativeAfterLoanDownPayment">
                   </a> <!-- bug007_accountBalanceGoesNegativeAfterLoanDownPayment -->
                   <span class="method-name">bug007_accountBalanceGoesNegativeAfterLoanDownPayment</span>
+                  <div class="stack-trace">java.lang.AssertionError: Login failed for negative test user expected [true] but found [false]
+	at testcases.NegativeTest.loginNegativeUser(NegativeTest.java:114)
+	at testcases.NegativeTest.bug007_accountBalanceGoesNegativeAfterLoanDownPayment(NegativeTest.java:524)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (PB-007 — Account balance should not go negative after loan down payment)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="bug_LoginWithInvalidCredentials(, , Empty username and password)">
-                  </a> <!-- bug_LoginWithInvalidCredentials(, , Empty username and password) -->
+                  <a name="bug_LoginWithInvalidCredentials(wrongUser_xyz, wrongPass_123, Invalid username and password)">
+                  </a> <!-- bug_LoginWithInvalidCredentials(wrongUser_xyz, wrongPass_123, Invalid username and password) -->
                   <span class="method-name">bug_LoginWithInvalidCredentials</span>
-                  <span class="parameters">(,,Empty username and password)</span>
+                  <span class="parameters">(wrongUser_xyz,wrongPass_123,Invalid username and password)</span>
+                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
+	DEFECT — No error message shown for: Invalid username and password expected [true] but found [false]
+	at testcases.NegativeTest.bug_LoginWithInvalidCredentials(NegativeTest.java:174)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (LOGIN NEGATIVE — Invalid credentials should show error)                  </em>
                 </div> <!-- method-content -->
@@ -248,16 +305,30 @@
                   </a> <!-- bug_LoginWithInvalidCredentials(Shubhs, wrongPass, Valid username, wrong password) -->
                   <span class="method-name">bug_LoginWithInvalidCredentials</span>
                   <span class="parameters">(Shubhs,wrongPass,Valid username, wrong password)</span>
+                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
+	DEFECT — No error message shown for: Valid username, wrong password expected [true] but found [false]
+	at testcases.NegativeTest.bug_LoginWithInvalidCredentials(NegativeTest.java:174)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (LOGIN NEGATIVE — Invalid credentials should show error)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ParaBank_Negative_Testing_Suite-class-failed -->
+          <div class="suite-ParaBank_Negative_Testing_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.NegativeTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="bug_LoginWithInvalidCredentials(wrongUser_xyz, wrongPass_123, Invalid username and password)">
-                  </a> <!-- bug_LoginWithInvalidCredentials(wrongUser_xyz, wrongPass_123, Invalid username and password) -->
+                  <a name="bug_LoginWithInvalidCredentials(, , Empty username and password)">
+                  </a> <!-- bug_LoginWithInvalidCredentials(, , Empty username and password) -->
                   <span class="method-name">bug_LoginWithInvalidCredentials</span>
-                  <span class="parameters">(wrongUser_xyz,wrongPass_123,Invalid username and password)</span>
+                  <span class="parameters">(,,Empty username and password)</span>
                   <em>
 (LOGIN NEGATIVE — Invalid credentials should show error)                  </em>
                 </div> <!-- method-content -->
@@ -267,7 +338,7 @@
         </div> <!-- panel ParaBank_Negative_Testing_Suite -->
         <div panel-name="test-xml-ParaBank_Negative_Testing_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Shubhank\eclipse-workspace\ParabankAutomation\testng-negative.xml</span>
+            <span class="header-content">D:\CapstoneProject_testNG\ParabankAutomation\testng-negative.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -323,48 +394,48 @@ data.addRows(10);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'bug_LoginWithInvalidCredentials')
 data.setCell(0, 2, 'testcases.NegativeTest')
-data.setCell(0, 3, 20580);
+data.setCell(0, 3, 33486);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'bug004_billPayAcceptsMismatchedAccountNumbers')
+data.setCell(1, 1, 'bug_LoginWithInvalidCredentials')
 data.setCell(1, 2, 'testcases.NegativeTest')
-data.setCell(1, 3, 17389);
+data.setCell(1, 3, 33283);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'bug_LoginWithInvalidCredentials')
 data.setCell(2, 2, 'testcases.NegativeTest')
-data.setCell(2, 3, 11103);
+data.setCell(2, 3, 22361);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'bug_LoginWithInvalidCredentials')
+data.setCell(3, 1, 'bug001_transferFundsAllowsNegativeAmount')
 data.setCell(3, 2, 'testcases.NegativeTest')
-data.setCell(3, 3, 11043);
+data.setCell(3, 3, 18745);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'bug001_transferFundsAllowsNegativeAmount')
+data.setCell(4, 1, 'bug003_transferFundsAllowsSameSourceAndDestinationAccount')
 data.setCell(4, 2, 'testcases.NegativeTest')
-data.setCell(4, 3, 5071);
+data.setCell(4, 3, 16308);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'bug002_billPaymentAllowsNegativeAmount')
 data.setCell(5, 2, 'testcases.NegativeTest')
-data.setCell(5, 3, 2750);
+data.setCell(5, 3, 16082);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'bug006_loanApprovedWithNegativeDownPayment')
+data.setCell(6, 1, 'bug005_transferFundsAllowsZeroAmount')
 data.setCell(6, 2, 'testcases.NegativeTest')
-data.setCell(6, 3, 2597);
+data.setCell(6, 3, 14696);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'bug005_transferFundsAllowsZeroAmount')
+data.setCell(7, 1, 'bug004_billPayAcceptsMismatchedAccountNumbers')
 data.setCell(7, 2, 'testcases.NegativeTest')
-data.setCell(7, 3, 2557);
+data.setCell(7, 3, 14043);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'bug003_transferFundsAllowsSameSourceAndDestinationAccount')
+data.setCell(8, 1, 'bug006_loanApprovedWithNegativeDownPayment')
 data.setCell(8, 2, 'testcases.NegativeTest')
-data.setCell(8, 3, 2241);
+data.setCell(8, 3, 13972);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'bug007_accountBalanceGoesNegativeAfterLoanDownPayment')
 data.setCell(9, 2, 'testcases.NegativeTest')
-data.setCell(9, 3, 2044);
+data.setCell(9, 3, 9971);
 window.suiteTableData['ParaBank_Negative_Testing_Suite']= { tableData: data, tableDiv: 'times-div-ParaBank_Negative_Testing_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-ParaBank_Negative_Testing_Suite">
               </div> <!-- times-div-ParaBank_Negative_Testing_Suite -->
             </div> <!-- times-div -->
@@ -396,120 +467,140 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">bug_LoginWithInvalidCredentials(wrongUser_xyz, wrongPass_123, Invalid username and password)</span>
-                <span class="method-start">1185 ms</span>
+                <span class="method-start">6090 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=bug_LoginWithInvalidCredentials status=SUCCESS method=NegativeTest.bug_LoginWithInv...)</span>
-                <span class="method-start">12291 ms</span>
+                <span class="method-name">tearDown([TestResult name=bug_LoginWithInvalidCredentials status=FAILURE method=NegativeTest.bug_LoginWithInv...)</span>
+                <span class="method-start">39698 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">12455 ms</span>
+                <span class="method-start">39982 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">bug_LoginWithInvalidCredentials(, , Empty username and password)</span>
-                <span class="method-start">13150 ms</span>
+                <span class="method-start">42925 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown([TestResult name=bug_LoginWithInvalidCredentials status=SUCCESS method=NegativeTest.bug_LoginWithInv...)</span>
-                <span class="method-start">33731 ms</span>
+                <span class="method-start">65292 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">33958 ms</span>
+                <span class="method-start">65490 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">bug_LoginWithInvalidCredentials(Shubhs, wrongPass, Valid username, wrong password)</span>
-                <span class="method-start">34623 ms</span>
+                <span class="method-start">68239 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=bug_LoginWithInvalidCredentials status=SUCCESS method=NegativeTest.bug_LoginWithInv...)</span>
-                <span class="method-start">45667 ms</span>
+                <span class="method-name">tearDown([TestResult name=bug_LoginWithInvalidCredentials status=FAILURE method=NegativeTest.bug_LoginWithInv...)</span>
+                <span class="method-start">101612 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">45844 ms</span>
+                <span class="method-start">101836 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">bug001_transferFundsAllowsNegativeAmount</span>
-                <span class="method-start">46520 ms</span>
+                <span class="method-start">105526 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=bug001_transferFundsAllowsNegativeAmount status=SUCCESS method=NegativeTest.bug001_...)</span>
-                <span class="method-start">51593 ms</span>
+                <span class="method-name">tearDown([TestResult name=bug001_transferFundsAllowsNegativeAmount status=FAILURE method=NegativeTest.bug001_...)</span>
+                <span class="method-start">124384 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">51822 ms</span>
+                <span class="method-start">124665 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">bug002_billPaymentAllowsNegativeAmount</span>
-                <span class="method-start">52531 ms</span>
+                <span class="method-start">128175 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=bug002_billPaymentAllowsNegativeAmount status=SUCCESS method=NegativeTest.bug002_bi...)</span>
-                <span class="method-start">55284 ms</span>
+                <span class="method-name">tearDown([TestResult name=bug002_billPaymentAllowsNegativeAmount status=FAILURE method=NegativeTest.bug002_bi...)</span>
+                <span class="method-start">144340 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">55493 ms</span>
+                <span class="method-start">144593 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">bug003_transferFundsAllowsSameSourceAndDestinationAccount</span>
-                <span class="method-start">56187 ms</span>
+                <span class="method-start">151546 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=bug003_transferFundsAllowsSameSourceAndDestinationAccount status=SUCCESS method=Neg...)</span>
-                <span class="method-start">58433 ms</span>
+                <span class="method-name">tearDown([TestResult name=bug003_transferFundsAllowsSameSourceAndDestinationAccount status=FAILURE method=Neg...)</span>
+                <span class="method-start">167952 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">58640 ms</span>
+                <span class="method-start">168308 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">bug004_billPayAcceptsMismatchedAccountNumbers</span>
-                <span class="method-start">59315 ms</span>
+                <span class="method-start">171060 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=bug004_billPayAcceptsMismatchedAccountNumbers status=SUCCESS method=NegativeTest.bu...)</span>
-                <span class="method-start">76706 ms</span>
+                <span class="method-name">tearDown([TestResult name=bug004_billPayAcceptsMismatchedAccountNumbers status=FAILURE method=NegativeTest.bu...)</span>
+                <span class="method-start">185180 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">76896 ms</span>
+                <span class="method-start">185446 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">bug005_transferFundsAllowsZeroAmount</span>
-                <span class="method-start">77554 ms</span>
+                <span class="method-start">189581 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=bug005_transferFundsAllowsZeroAmount status=SUCCESS method=NegativeTest.bug005_tran...)</span>
-                <span class="method-start">80112 ms</span>
+                <span class="method-name">tearDown([TestResult name=bug005_transferFundsAllowsZeroAmount status=FAILURE method=NegativeTest.bug005_tran...)</span>
+                <span class="method-start">204358 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">80278 ms</span>
+                <span class="method-start">204651 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">bug006_loanApprovedWithNegativeDownPayment</span>
-                <span class="method-start">80981 ms</span>
+                <span class="method-start">206648 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=bug006_loanApprovedWithNegativeDownPayment status=SUCCESS method=NegativeTest.bug00...)</span>
-                <span class="method-start">83580 ms</span>
+                <span class="method-name">tearDown([TestResult name=bug006_loanApprovedWithNegativeDownPayment status=FAILURE method=NegativeTest.bug00...)</span>
+                <span class="method-start">220691 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">83779 ms</span>
+                <span class="method-start">220937 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">bug007_accountBalanceGoesNegativeAfterLoanDownPayment</span>
-                <span class="method-start">84374 ms</span>
+                <span class="method-start">223742 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=bug007_accountBalanceGoesNegativeAfterLoanDownPayment status=SUCCESS method=Negativ...)</span>
-                <span class="method-start">86425 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">tearDown([TestResult name=bug007_accountBalanceGoesNegativeAfterLoanDownPayment status=FAILURE method=Negativ...)</span>
+                <span class="method-start">233748 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
