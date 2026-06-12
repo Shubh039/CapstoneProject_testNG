@@ -41,6 +41,19 @@ public class BaseTest {
                 chromeOptions.addArguments("--disable-infobars");
                 chromeOptions.addArguments("--disable-notifications");
                 chromeOptions.addArguments("--start-maximized");
+                chromeOptions.addArguments("--remote-allow-origins=*");
+
+                String isHeadless = System.getProperty("headless", "false");
+                if (isHeadless.equals("true")) {
+                    chromeOptions.addArguments("--headless");
+                    chromeOptions.addArguments("--no-sandbox");
+                    chromeOptions.addArguments("--disable-dev-shm-usage");
+                    chromeOptions.addArguments("--window-size=1920,1080");
+                    log.info("Running Chrome in HEADLESS mode (Docker/CI environment)");
+                } else {
+                    log.info("Running Chrome in NORMAL mode (local environment)");
+                }
+
                 webDriver = new ChromeDriver(chromeOptions);
                 break;
                 

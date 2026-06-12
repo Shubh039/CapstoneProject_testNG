@@ -6,57 +6,88 @@ pipeline {
     }
 
     stages {
-
         stage('Checkout') {
             steps {
+                echo '======== Checking out source code ========'
                 git branch: 'master',
                     url: 'https://github.com/Shubh039/CapstoneProject_testNG'
+                echo '✅ Code pulled from GitHub'
             }
         }
-
-        stage('Build') {
+        
+        stage('Start Parabank') {
             steps {
+                echo '======== Starting Parabank in Docker ========'
+                bat '''
+                    docker stop parabank 2>nul || echo No old container
+                    docker rm parabank 2>nul || echo No old container
+                    docker pull parasoft/parabank
+                    docker run -d --name parabank -p 8080:8080 parasoft/parabank
+                    ping -n 41 127.0.0.1 > nul
+                    echo Parabank ready on port 8080
+                '''
+                echo '✅ Parabank running in Docker'
+            }
+        }
+        
+        stage('Build Docker Image') {
+            steps {
+                echo '======== Building Automation Docker Image ========'
                 dir('ParabankAutomation') {
-                    bat 'mvn clean install -DskipTests'
+                    bat 'docker build -t parabank-automation .'
                 }
+                echo '✅ Docker image built successfully'
             }
         }
 
         stage('Run Negative Tests') {
             steps {
+                echo '======== Running Negative Tests in Docker ========'
                 dir('ParabankAutomation') {
-                    bat 'mvn test -Dsurefire.suiteXmlFiles=testng-negative.xml'
+                    bat '''
+                        docker run --rm ^
+                          -e headless=true ^
+                          --add-host=host.docker.internal:host-gateway ^
+                          -v %CD%/reports:/app/reports ^
+                          -v %CD%/screenshots:/app/screenshots ^
+                          -v %CD%/logs:/app/logs ^
+                          parabank-automation
+                    '''
                 }
+                echo '✅ Negative tests completed inside Docker'
             }
         }
+
 
         stage('Archive Reports') {
             steps {
+                echo '======== Archiving Reports ========'
                 archiveArtifacts artifacts: 'ParabankAutomation/reports/**/*',
                                  allowEmptyArchive: true
-
                 archiveArtifacts artifacts: 'ParabankAutomation/screenshots/**/*',
                                  allowEmptyArchive: true
-
                 archiveArtifacts artifacts: 'ParabankAutomation/logs/**/*',
                                  allowEmptyArchive: true
+                echo '✅ Reports archived'
             }
-        }
     }
 
     post {
-
         always {
+            echo '======== Cleanup ========'
+            bat '''
+                docker stop parabank 2>nul || echo Already stopped
+                docker rm parabank 2>nul || echo Already removed
+                echo Cleanup done
+            '''
             junit allowEmptyResults: true,
                   testResults: 'ParabankAutomation/**/target/surefire-reports/*.xml'
         }
-
         success {
-            echo 'Build Successful'
+            echo '✅ BUILD SUCCESSFUL — All tests passed'
         }
-
         failure {
-            echo 'Build Failed'
+            echo '❌ BUILD FAILED — Check Console Output'
         }
     }
 }
