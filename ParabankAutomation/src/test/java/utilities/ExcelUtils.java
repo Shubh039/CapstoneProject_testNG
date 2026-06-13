@@ -6,7 +6,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.*;
 
 public class ExcelUtils {
-    private static final String FILE_PATH = ConfigReader.get("excelPath");
+    private static final String FILE_PATH = System.getProperty("user.dir") + "/" + ConfigReader.get("excelPath");
     
     // Reading File
     public static String getCellData(String sheetName, int rowIndex, int colIndex) {

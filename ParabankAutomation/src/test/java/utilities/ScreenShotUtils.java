@@ -21,9 +21,10 @@ public class ScreenShotUtils {
 		File source = ts.getScreenshotAs(OutputType.FILE); // storing in a temporary file
 		
 		String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
-		String destination = ConfigReader.get("screenshotPath") + testName + "_" + timestamp + ".png";
+		String screenshotBase = System.getProperty("user.dir") + "/" + ConfigReader.get("screenshotPath");
+		String destination = screenshotBase + testName + "_" + timestamp + ".png";
 		try {
-			Path screenshotDir = Paths.get(ConfigReader.get("screenshotPath"));
+			Path screenshotDir = Paths.get(screenshotBase);
 			Files.createDirectories(screenshotDir);
 			Files.copy(source.toPath(), Paths.get(destination));
             log.info("Screenshot saved: {}", destination);
