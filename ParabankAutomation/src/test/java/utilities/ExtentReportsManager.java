@@ -23,7 +23,8 @@ public class ExtentReportsManager {
         sparkReporter.config().setTheme(Theme.DARK);   // DARK or STANDARD
         sparkReporter.config().setTimeStampFormat("MMM dd, yyyy HH:mm:ss");
         sparkReporter.config().setEncoding("UTF-8");
-
+        
+        sparkReporter.config().setOfflineMode(true);
         // Creating the main ExtentReports object
         extent = new ExtentReports();
         extent.attachReporter(sparkReporter);
