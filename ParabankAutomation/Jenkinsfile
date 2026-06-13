@@ -51,6 +51,7 @@ pipeline {
                           -v %CD%/reports:/app/reports ^
                           -v %CD%/screenshots:/app/screenshots ^
                           -v %CD%/logs:/app/logs ^
+                          -v %CD%/target:/app/target ^
                           parabank-automation
                     '''
                 }
