@@ -32,4 +32,4 @@ RUN mvn dependency:go-offline -B
 
 COPY . .
 
-CMD ["mvn","test","-Dsurefire.suiteXmlFiles=testng.xml"]
+CMD ["mvn","test","-Dlog4j2.disableJmx=true","-Dsurefire.suiteXmlFiles=testng.xml"]

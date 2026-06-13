@@ -54,7 +54,7 @@ pipeline {
                           parabank-automation
                     '''
                 }
-                echo '✅ Negative tests completed inside Docker'
+                echo '✅ Tests completed inside Docker'
             }
         }
 

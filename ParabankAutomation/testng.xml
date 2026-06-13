@@ -7,33 +7,21 @@
         <listener class-name="utilities.TestListener"/>
     </listeners>
     
-    <test name="RegistrationTest">
+    <test name="POSITIVE TEST CASES">
         <classes>
             <class name="testcases.RegistrationTest"/>
-        </classes>
-    </test>
-
-    <test name="LoginTest">
-        <classes>
             <class name="testcases.LoginTest"/>
-        </classes>
-    </test>
-    
-    <test name="OpenAccountTest">
-        <classes>
             <class name="testcases.OpenAccountTest"/>
+            <class name="testcases.TransferFundsTest"/>
+            <class name="testcases.BillPaymentTest"/>
+            <class name="testcases.RequestLoanTest"/>
         </classes>
     </test>
     
-    <test name="TransferFundsTest">
+    <test name="NEGATIVE TEST CASES">
         <classes>
-            <class name="testcases.TransferFundsTest"/>
+            <class name="testcases.NegativeTest"/>
         </classes>
     </test>
-    <test name="BillPaymentTest">
-        <classes>
-            <class name="testcases.BillPaymentTest"/>
-        </classes>
-    </test>
-
+    
 </suite>
