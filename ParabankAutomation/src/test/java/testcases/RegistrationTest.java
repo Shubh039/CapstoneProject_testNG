@@ -18,7 +18,7 @@ public class RegistrationTest extends BaseTest {
 
     @Test(priority = 1,
     	  groups = {"smoke", "regression"},
-          description = "TC02 - Register a new user with valid data from Excel")
+          description = "TC01 - Register a new user with valid data from Excel")
     public void TC01_testValidReg() {
         // ── Step 1: Read test data from Excel ────────────────────────
         log.info("Reading registration data from Excel sheet: {}", REG_SHEET);

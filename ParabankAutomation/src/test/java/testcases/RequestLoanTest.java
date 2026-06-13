@@ -13,22 +13,15 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class RequestLoanTest extends BaseTest {
-
     private static final Logger log = LoggerUtil.getLogger(RequestLoanTest.class);
-
     private static final String LOGIN_SHEET = "LoginData";
 
-    // ─────────────────────────────────────────────
-    //  HELPER — Login
-    // ─────────────────────────────────────────────
     private LoginPage loginWithExcelCredentials() {
         String username = ExcelUtils.getCellData(LOGIN_SHEET, 1, 0);
         String password = ExcelUtils.getCellData(LOGIN_SHEET, 1, 1);
 
         log.info("Logging in — Username: {}", username);
-        ExtentReportsManager.getTest()
-            .info("📂 Reading credentials from LoginData — Username: " + username);
-
+        ExtentReportsManager.getTest().info("📂 Reading credentials from LoginData — Username: " + username);
         LoginPage loginPage = new LoginPage(getDriver());
         loginPage.login(username, password);
 
@@ -38,30 +31,21 @@ public class RequestLoanTest extends BaseTest {
         );
 
         log.info("Login successful ✅");
-        ExtentReportsManager.getTest()
-            .info("✅ Login successful — proceeding with loan test");
-
+        ExtentReportsManager.getTest().info("✅ Login successful — proceeding with loan test");
         return loginPage;
     }
 
-    // ═══════════════════════════════════════════════════════════
-    //  POSITIVE TEST CASES
-    // ═══════════════════════════════════════════════════════════
     @Test(priority = 1,
           groups = {"smoke", "regression"},
           description = "TC-LOAN-01 — Valid loan application should be approved")
     public void TC01_validLoanApplication() {
-
         LoginPage loginPage = loginWithExcelCredentials();
-
+        
         // ── Step 1: Record balance before applying ───────────────────
         log.info("Navigating to Accounts Overview to record balance before loan application");
-        ExtentReportsManager.getTest()
-            .info("📊 Navigating to Accounts Overview");
-
+        ExtentReportsManager.getTest().info("📊 Navigating to Accounts Overview");
         AccountsOverviewPage overviewPage = new AccountsOverviewPage(getDriver());
         overviewPage.navigateToOverview();
-
         String sourceAccount  = overviewPage.getFirstAccountNumber();
         double balanceBefore  = overviewPage.getAccountBalance(sourceAccount);
 
@@ -85,7 +69,6 @@ public class RequestLoanTest extends BaseTest {
         loanPage.enterDownPayment("100");
         loanPage.selectFromAccount(sourceAccount);
         loanPage.clickApplyNow();
-
         log.info("Loan application form submitted");
         ExtentReportsManager.getTest()
             .info("📤 Loan application form submitted");
@@ -95,7 +78,6 @@ public class RequestLoanTest extends BaseTest {
             loanPage.isLoanResultDisplayed(),
             "Loan result not displayed after applying"
         );
-
         log.info("Loan result displayed ✅");
         ExtentReportsManager.getTest()
             .info("✅ Loan result displayed after submission");
@@ -143,9 +125,7 @@ public class RequestLoanTest extends BaseTest {
         overviewPage.navigateToOverview();
 
         SoftAssert softAssert = new SoftAssert();
-
         boolean newAccountFound = overviewPage.findAccountNumber(newLoanAccount);
-
         log.info("New loan account found in overview: {}", newAccountFound);
         ExtentReportsManager.getTest()
             .info("🔍 Verifying new loan account " + newLoanAccount
@@ -201,22 +181,15 @@ public class RequestLoanTest extends BaseTest {
                 .fail("❌ DEFECT — Source account not reduced correctly. Expected: $"
                     + expectedBalance + " Actual: $" + balanceAfter);
         }
-
         softAssert.assertAll();
-
         log.info("TC-LOAN-01 — All loan verifications passed ✅");
-        ExtentReportsManager.getTest()
-            .info("✅ TC-LOAN-01 Complete — All loan verifications passed!");
+        ExtentReportsManager.getTest().info("✅ TC-LOAN-01 Complete — All loan verifications passed!");
 
         // ── Step 7: Logout ─────────────────────────────────────────────
         log.info("Logging out after loan verification");
-        ExtentReportsManager.getTest()
-            .info("🚪 Logging out — TC-LOAN-01 complete");
-
+        ExtentReportsManager.getTest().info("🚪 Logging out — TC-LOAN-01 complete");
         loginPage.logout();
-
         log.info("TC01_validLoanApplication completed ✅");
-        ExtentReportsManager.getTest()
-            .info("✅ TC01_validLoanApplication completed successfully");
+        ExtentReportsManager.getTest().info("✅ TC01_validLoanApplication completed successfully");
     }
 }

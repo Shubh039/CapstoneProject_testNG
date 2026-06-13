@@ -32,4 +32,4 @@ RUN mvn dependency:go-offline -B
 
 COPY . .
 
-CMD ["mvn","test","-Dsurefire.suiteXmlFiles=testng-negative.xml"]
+CMD ["mvn","test","-Dsurefire.suiteXmlFiles=testng.xml"]

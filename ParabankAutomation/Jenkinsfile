@@ -40,9 +40,9 @@ pipeline {
             }
         }
 
-        stage('Run Negative Tests') {
+        stage('Run Tests') {
             steps {
-                echo '======== Running Negative Tests in Docker ========'
+                echo '======== Running Tests in Docker ========'
                 dir('ParabankAutomation') {
                     bat '''
                         docker run --rm ^

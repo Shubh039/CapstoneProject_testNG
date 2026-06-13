@@ -14,7 +14,7 @@ public class LoginTest extends BaseTest {
 
     @Test(priority = 1,
           groups = {"smoke", "regression"},
-          description = "TC01 - Login with valid credentials from Excel")
+          description = "TC02 - Login with valid credentials from Excel")
     public void TC01_validLogin() {
         // ── Step 1: Read credentials from Excel ──────────────────────
         log.info("Reading credentials from Excel sheet: {}", LOGIN_SHEET);
