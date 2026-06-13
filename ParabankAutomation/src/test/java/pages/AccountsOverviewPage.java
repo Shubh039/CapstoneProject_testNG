@@ -97,10 +97,11 @@ public class AccountsOverviewPage {
         return parseCurrency(availableText);
     }
     
-    public void getAccountHolderName() {
+    public String getAccountHolderName() {
     	String text = driver.findElement(welcomeUserText).getText();
     	String username = text.replace("Welcome", "").trim();
     	System.out.println("Account Holder Name: " + username);
+    	return username;
     }
 
     /**
