@@ -43,15 +43,25 @@ public class BaseTest {
                 chromeOptions.addArguments("--start-maximized");
                 chromeOptions.addArguments("--remote-allow-origins=*");
 
-                String isHeadless = System.getProperty("headless", "false");
-                if (isHeadless.equals("true")) {
+                String envHeadless  = System.getenv("headless");
+                String propHeadless = System.getProperty("headless", "false");
+                String osName       = System.getProperty("os.name", "").toLowerCase();
+                boolean isLinux     = osName.contains("linux");
+
+                boolean runHeadless = "true".equals(envHeadless)
+                                      || "true".equals(propHeadless)
+                                      || isLinux;
+
+                if (runHeadless) {
                     chromeOptions.addArguments("--headless");
                     chromeOptions.addArguments("--no-sandbox");
                     chromeOptions.addArguments("--disable-dev-shm-usage");
+                    chromeOptions.addArguments("--disable-gpu");
                     chromeOptions.addArguments("--window-size=1920,1080");
-                    log.info("Running Chrome in HEADLESS mode (Docker/CI environment)");
+                    log.info("Running Chrome in HEADLESS mode (Linux/Docker/CI)");
                 } else {
-                    log.info("Running Chrome in NORMAL mode (local environment)");
+                    chromeOptions.addArguments("--start-maximized");
+                    log.info("Running Chrome in NORMAL mode (Windows/local)");
                 }
 
                 webDriver = new ChromeDriver(chromeOptions);
