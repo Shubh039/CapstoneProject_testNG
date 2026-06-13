@@ -22,9 +22,9 @@ pipeline {
                     docker stop parabank 2>nul || echo No old container
                     docker rm parabank 2>nul || echo No old container
                     docker pull parasoft/parabank
-                    docker run -d --name parabank -p 8080:8080 parasoft/parabank
+                    docker run -d --name parabank -p 8081:8080 parasoft/parabank
                     ping -n 41 127.0.0.1 > nul
-                    echo Parabank ready on port 8080
+                    echo Parabank ready on port 8081
                 '''
                 echo '✅ Parabank running in Docker'
             }
