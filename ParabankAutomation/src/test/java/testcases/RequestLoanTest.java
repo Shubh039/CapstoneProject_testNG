@@ -68,7 +68,11 @@ public class RequestLoanTest extends BaseTest {
         loanPage.enterLoanAmount("1000");
         loanPage.enterDownPayment("100");
         loanPage.selectFromAccount(sourceAccount);
+        log.info("Loan Amount : $"+ 1000);
+        log.info("Downpayment : $" + 100);
+        log.info("From Account : " + sourceAccount);
         loanPage.clickApplyNow();
+        log.info("Button Clicked");
         log.info("Loan application form submitted");
         ExtentReportsManager.getTest()
             .info("📤 Loan application form submitted");

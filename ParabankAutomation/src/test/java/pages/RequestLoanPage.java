@@ -14,10 +14,7 @@ public class RequestLoanPage {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    // ─────────────────────────────────────────────
     //  LOCATORS
-    // ─────────────────────────────────────────────
-
     // Navigation link
     private By requestLoanLink = By.linkText("Request Loan");
 
@@ -28,47 +25,34 @@ public class RequestLoanPage {
 
     // Submit button — type="button" triggers JavaScript AJAX
     private By applyNowButton    = By.xpath("//input[@value='Apply Now']");
-
     private By loanResultDiv     = By.id("requestLoanResult");
     private By loanStatus        = By.id("loanStatus");
     private By loanProviderName  = By.id("loanProviderName");
     private By newAccountId      = By.id("newAccountId");
-
     private By loanApprovedDiv   = By.id("loanRequestApproved");
-
     private By loanDeniedDiv     = By.id("loanRequestDenied");
     private By deniedMessage     = By.xpath("//div[@id='loanRequestDenied']/p");
-
     private By loanErrorDiv      = By.id("requestLoanError");
 
-    // ─────────────────────────────────────────────
     //  CONSTRUCTOR
-    // ─────────────────────────────────────────────
     public RequestLoanPage(WebDriver driver) {
         this.driver = driver;
         this.wait   = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
 
-    // ─────────────────────────────────────────────
     //  NAVIGATION
-    // ─────────────────────────────────────────────
     public void navigateToRequestLoan() {
-        wait.until(ExpectedConditions.elementToBeClickable(requestLoanLink))
-            .click();
+        wait.until(ExpectedConditions.elementToBeClickable(requestLoanLink)).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(loanAmountField));
-        System.out.println("Navigated to Request Loan page");
     }
 
-    // ─────────────────────────────────────────────
     //  FORM ACTIONS
-    // ─────────────────────────────────────────────
     public void enterLoanAmount(String amount) {
         WebElement field = wait.until(
             ExpectedConditions.visibilityOfElementLocated(loanAmountField)
         );
         field.clear();
         field.sendKeys(amount);
-        System.out.println("Entered Loan Amount: " + amount);
     }
 
     public void enterDownPayment(String downPayment) {
@@ -77,7 +61,6 @@ public class RequestLoanPage {
         );
         field.clear();
         field.sendKeys(downPayment);
-        System.out.println("Entered Down Payment: " + downPayment);
     }
 
     public void selectFromAccountByIndex(int index) {
@@ -86,8 +69,6 @@ public class RequestLoanPage {
         );
         Select select = new Select(dropdown);
         select.selectByIndex(index);
-        System.out.println("Selected FROM account at index: " + index
-            + " → " + select.getFirstSelectedOption().getText());
     }
 
     public void selectFromAccount(String accountNumber) {
@@ -95,13 +76,11 @@ public class RequestLoanPage {
             ExpectedConditions.visibilityOfElementLocated(fromAccountDrop)
         );
         new Select(dropdown).selectByValue(accountNumber);
-        System.out.println("Selected FROM account: " + accountNumber);
     }
 
     public void clickApplyNow() {
         wait.until(ExpectedConditions.elementToBeClickable(applyNowButton))
             .click();
-        System.out.println("Clicked Apply Now");
     }
 
     public void applyForLoan(String loanAmount, String downPayment,
@@ -113,9 +92,7 @@ public class RequestLoanPage {
         clickApplyNow();
     }
 
-    // ─────────────────────────────────────────────
     //  RESULT VERIFICATION
-    // ─────────────────────────────────────────────
     public boolean isLoanResultDisplayed() {
         try {
             WebElement result = wait.until(
@@ -123,7 +100,6 @@ public class RequestLoanPage {
             );
             return result.isDisplayed();
         } catch (Exception e) {
-            System.out.println("Loan result div NOT shown");
             return false;
         }
     }
@@ -133,10 +109,8 @@ public class RequestLoanPage {
             String status = wait.until(
                 ExpectedConditions.visibilityOfElementLocated(loanStatus)
             ).getText().trim();
-            System.out.println("Loan Status: " + status);
             return status.equalsIgnoreCase("Approved");
         } catch (Exception e) {
-            System.out.println("Could not read loan status");
             return false;
         }
     }
@@ -146,7 +120,6 @@ public class RequestLoanPage {
             String status = wait.until(
                 ExpectedConditions.visibilityOfElementLocated(loanStatus)
             ).getText().trim();
-            System.out.println("Loan Status: " + status);
             return status.equalsIgnoreCase("Denied");
         } catch (Exception e) {
             return false;
@@ -169,7 +142,6 @@ public class RequestLoanPage {
                 ExpectedConditions.visibilityOfElementLocated(newAccountId)
             ).getText().trim();
         } catch (Exception e) {
-            System.out.println("New account ID not found — loan may not be approved");
             return "";
         }
     }

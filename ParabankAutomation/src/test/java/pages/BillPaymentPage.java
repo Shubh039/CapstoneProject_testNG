@@ -106,14 +106,9 @@ public class BillPaymentPage {
 				new Select(dropdown).selectByValue(fromAccount);
 				
 				wait.until(ExpectedConditions.elementToBeClickable(sendPaymentBtn)).click();
-				System.out.println("Clicked Send Payment with mismatched accounts");
     }
     
-    // ─────────────────────────────────────────────
-    //  RESULT VERIFICATION
-    // ─────────────────────────────────────────────
-
-    
+    //  RESULT VERIFICATION   
     public boolean isPaymentSuccessful() {
         try {
             WebElement result = wait.until(
@@ -145,10 +140,7 @@ public class BillPaymentPage {
         ).getText().trim();
     }
     
-    // ─────────────────────────────────────────────
-    //  VALIDATION ERROR CHECKS
-    // ─────────────────────────────────────────────
-    
+    //  VALIDATION ERROR CHECKS  
     public boolean isAccountMismatchErrorDisplayed() {
         try {
             return driver.findElement(errorVerifyMismatch).isDisplayed();
