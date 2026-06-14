@@ -26,7 +26,7 @@ public class BaseTest {
         return driver.get();
     }
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setUp() {
         // Reading the browser name from config.properties
         String browser = ConfigReader.get("browser").toLowerCase();
