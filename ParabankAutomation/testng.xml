@@ -17,7 +17,7 @@
          Runs only @Test methods tagged groups={"smoke"}
          One positive test per module — quick sanity check
          ════════════════════════════════════════════ -->
-    <test name="SMOKE TESTS — Core Functionality">
+    <test name="SMOKE TESTS">
         <groups>
             <run>
                 <include name="smoke"/>
@@ -37,7 +37,7 @@
     <!-- ════════════════════════════════════════════
          BLOCK 2 — REGRESSION TESTS
          ════════════════════════════════════════════ -->
-    <test name="REGRESSION TESTS — Full Coverage">
+    <test name="REGRESSION TESTS">
         <groups>
             <run>
                 <include name="regression"/>
@@ -57,7 +57,7 @@
     <!-- ════════════════════════════════════════════
          BLOCK 3 — NEGATIVE TESTS
          ════════════════════════════════════════════ -->
-    <test name="NEGATIVE TESTS — Defect Documentation">
+    <test name="NEGATIVE TESTS">
         <classes>
             <class name="testcases.NegativeTest"/>
         </classes>
