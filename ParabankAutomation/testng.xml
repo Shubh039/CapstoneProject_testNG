@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="ParaBank Positive Testing Suite" verbose="1">
+<!-- ═══════════════════════════════════
+    MASTER SUITE — ParaBank Automation
+    ════════════════════════════════════
+-->
 
-	<listeners>
+<suite name="ParaBank Complete Test Suite" verbose="1">
+
+    <listeners>
         <listener class-name="utilities.TestListener"/>
     </listeners>
-    
-    <test name="POSITIVE TEST CASES">
+
+    <!-- ════════════════════════════════════════════
+         BLOCK 1 — SMOKE TESTS
+         Runs only @Test methods tagged groups={"smoke"}
+         One positive test per module — quick sanity check
+         ════════════════════════════════════════════ -->
+    <test name="SMOKE TESTS — Core Functionality">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+
         <classes>
             <class name="testcases.RegistrationTest"/>
             <class name="testcases.LoginTest"/>
@@ -17,11 +33,34 @@
             <class name="testcases.RequestLoanTest"/>
         </classes>
     </test>
-    
-    <test name="NEGATIVE TEST CASES">
+
+    <!-- ════════════════════════════════════════════
+         BLOCK 2 — REGRESSION TESTS
+         ════════════════════════════════════════════ -->
+    <test name="REGRESSION TESTS — Full Coverage">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="testcases.RegistrationTest"/>
+            <class name="testcases.LoginTest"/>
+            <class name="testcases.OpenAccountTest"/>
+            <class name="testcases.TransferFundsTest"/>
+            <class name="testcases.BillPaymentTest"/>
+            <class name="testcases.RequestLoanTest"/>
+        </classes>
+    </test>
+
+    <!-- ════════════════════════════════════════════
+         BLOCK 3 — NEGATIVE TESTS
+         ════════════════════════════════════════════ -->
+    <test name="NEGATIVE TESTS — Defect Documentation">
         <classes>
             <class name="testcases.NegativeTest"/>
         </classes>
     </test>
-    
+
 </suite>

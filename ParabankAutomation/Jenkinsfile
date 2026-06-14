@@ -42,7 +42,8 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                echo '======== Running Tests in Docker ========'
+                echo '======== Running All Test Suites in Docker ========'
+                echo 'Order: Smoke → Regression → Negative'
                 dir('ParabankAutomation') {
                     bat '''
                         docker run --rm ^
@@ -86,10 +87,16 @@ pipeline {
                   testResults: 'ParabankAutomation/**/target/surefire-reports/*.xml'
         }
         success {
-            echo '✅ BUILD SUCCESSFUL — All tests passed'
+            echo '╔══════════════════════════════════════╗'
+            echo '║   ✅ ALL SUITES PASSED               ║'
+            echo '║   Smoke + Regression + Negative      ║'
+            echo '╚══════════════════════════════════════╝'
         }
         failure {
-            echo '❌ BUILD FAILED — Check Console Output'
+            echo '╔══════════════════════════════════════╗'
+            echo '║   ❌ BUILD FAILED                    ║'
+            echo '║   Check Console Output for details   ║'
+            echo '╚══════════════════════════════════════╝'
         }
 	}
 }
