@@ -21,7 +21,18 @@ import org.apache.logging.log4j.Logger;
 
 public class NegativeTest extends BaseTest {
 	private static String REG_SHEET = "Registration";
+    private static final String PAYEE_SHEET   = "BillPay";
     private static final Logger log = LoggerUtil.getLogger(NegativeTest.class);
+    
+    private static final String PAYEE_NAME    = ExcelUtils.getCellData(PAYEE_SHEET, 1, 0);
+    private static final String PAYEE_ADDRESS = ExcelUtils.getCellData(PAYEE_SHEET, 1, 1);
+    private static final String PAYEE_CITY    = ExcelUtils.getCellData(PAYEE_SHEET, 1, 2);
+    private static final String PAYEE_STATE   = ExcelUtils.getCellData(PAYEE_SHEET, 1, 3);
+    private static final String PAYEE_ZIP     = ExcelUtils.getCellData(PAYEE_SHEET, 1, 4);
+    private static final String PAYEE_PHONE   = ExcelUtils.getCellData(PAYEE_SHEET, 1, 5);
+    private static final String PAYEE_ACCOUNT = ExcelUtils.getCellData(PAYEE_SHEET, 1, 6);
+    private static final String PAY_AMOUNT    = ExcelUtils.getCellData(PAYEE_SHEET, 1, 7);
+    
 	// method to print report
     private void printBugReport(String bugId, String module, String inputData,
                                  String expectedResult, String actualResult,
@@ -67,8 +78,6 @@ public class NegativeTest extends BaseTest {
         }
     }
     private String registerNegativeTestUser() {
-        String username = "demo" + System.currentTimeMillis();
-        String password = "Test@1234";
 
         RegistrationPage regPage = new RegistrationPage(getDriver());
         regPage.clickRegisterLink();
@@ -81,6 +90,8 @@ public class NegativeTest extends BaseTest {
         String zipCode   = ExcelUtils.getCellData(REG_SHEET, 1, 5);
         String phone     = ExcelUtils.getCellData(REG_SHEET, 1, 6);
         String ssn       = ExcelUtils.getCellData(REG_SHEET, 1, 7);
+        String username  = ExcelUtils.getCellData(REG_SHEET, 1, 8) + "_" + System.currentTimeMillis();
+        String password  = ExcelUtils.getCellData(REG_SHEET, 1, 9);
         
         regPage.fillAndSubmitRegistrationForm(
                 firstName, lastName, address, city, state,
@@ -243,15 +254,15 @@ public class NegativeTest extends BaseTest {
         overviewPage.navigateToOverview();
         String fromAccount = overviewPage.getFirstAccountNumber();
         log.info("Source Account: {}", fromAccount);
-
+        
         BillPaymentPage billPayPage = new BillPaymentPage(getDriver());
         log.info("Navigating to Bill Payment page");
         billPayPage.navigateToBillPay();
+        
         billPayPage.fillAndSubmitBillPayment(
-            "Shubhank", "HL 333", "Ludhiana", "Punjab",
-            "141010", "9872300871", "13122",
-            "-100", fromAccount
-        );
+                PAYEE_NAME, PAYEE_ADDRESS, PAYEE_CITY, PAYEE_STATE,
+                PAYEE_ZIP, PAYEE_PHONE, PAYEE_ACCOUNT, "-100", fromAccount
+            );
 
         boolean paymentSucceeded  = billPayPage.isPaymentSuccessful();
         boolean invalidErrShown   = billPayPage.isAmountInvalidErrorDisplayed();
@@ -259,7 +270,7 @@ public class NegativeTest extends BaseTest {
         printBugReport(
             "PB-002",
             "Bill Payment",
-            "Payee = Shubhank, Amount = -100, From = " + fromAccount,
+            "Payee = " + PAYEE_NAME + ", Amount = -100, From = " + fromAccount,
             "System should reject negative payment amount",
             paymentSucceeded ? "Bill Payment Complete — BUG"
                              : "Payment rejected — OK",
@@ -346,8 +357,8 @@ public class NegativeTest extends BaseTest {
         
         log.info("Submitting bill payment with mismatched account numbers. AccountNumber=12345, VerifyAccountNumber=67890");
         billPayPage.fillWithMismatchedAccounts(
-            "Shubhank", "HL 333", "LDH", "PUN",
-            "141010", "9897346464",
+            PAYEE_NAME, PAYEE_ADDRESS, PAYEE_CITY, PAYEE_STATE,
+            PAYEE_ZIP, PAYEE_PHONE,
             "12345",    // account number
             "67890",    // verify account — intentional mismatch
             "5",

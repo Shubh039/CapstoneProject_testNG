@@ -32,14 +32,8 @@ public class RegistrationTest extends BaseTest {
         String zipCode   = ExcelUtils.getCellData(REG_SHEET, 1, 5);
         String phone     = ExcelUtils.getCellData(REG_SHEET, 1, 6);
         String ssn       = ExcelUtils.getCellData(REG_SHEET, 1, 7);
-        /**
-         * Username is hardcoded for demo project — one fixed user.
-         * In a data-driven project this would come from Excel too:
-         * String username = ExcelUtils.getCellData(REG_SHEET, 1, 8)
-         *                   + "_" + System.currentTimeMillis();
-         */
-        String username = "Shubhs";
-        String password = "demo";
+        String username = ExcelUtils.getCellData(REG_SHEET, 1, 8) + System.currentTimeMillis();
+        String password = ExcelUtils.getCellData(REG_SHEET, 1, 9);
         log.info("Test data loaded successfully");
         log.info("Registering user: {}", username);
 

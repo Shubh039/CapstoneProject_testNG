@@ -14,16 +14,17 @@ import org.testng.asserts.SoftAssert;
 
 public class BillPaymentTest extends BaseTest {
     private static final Logger log = LoggerUtil.getLogger(BillPaymentTest.class);
-
+    private static final String PAYEE_SHEET   = "BillPay";
     private static final String LOGIN_SHEET   = "LoginData";
-    private static final String PAYEE_NAME    = "Shubhank";
-    private static final String PAYEE_ADDRESS = "123 Test Street";
-    private static final String PAYEE_CITY    = "New York";
-    private static final String PAYEE_STATE   = "NY";
-    private static final String PAYEE_ZIP     = "10001";
-    private static final String PAYEE_PHONE   = "9876543210";
-    private static final String PAYEE_ACCOUNT = "13122";
-    private static final String PAY_AMOUNT    = "100";
+    
+    private static final String PAYEE_NAME    = ExcelUtils.getCellData(PAYEE_SHEET, 1, 0);
+    private static final String PAYEE_ADDRESS = ExcelUtils.getCellData(PAYEE_SHEET, 1, 1);
+    private static final String PAYEE_CITY    = ExcelUtils.getCellData(PAYEE_SHEET, 1, 2);
+    private static final String PAYEE_STATE   = ExcelUtils.getCellData(PAYEE_SHEET, 1, 3);
+    private static final String PAYEE_ZIP     = ExcelUtils.getCellData(PAYEE_SHEET, 1, 4);
+    private static final String PAYEE_PHONE   = ExcelUtils.getCellData(PAYEE_SHEET, 1, 5);
+    private static final String PAYEE_ACCOUNT = ExcelUtils.getCellData(PAYEE_SHEET, 1, 6);
+    private static final String PAY_AMOUNT    = ExcelUtils.getCellData(PAYEE_SHEET, 1, 7);
 
     private LoginPage loginWithExcelCredentials() {
         String username = ExcelUtils.getCellData(LOGIN_SHEET, 1, 0);
