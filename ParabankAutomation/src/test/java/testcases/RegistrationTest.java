@@ -33,7 +33,7 @@ public class RegistrationTest extends BaseTest {
         String phone     = ExcelUtils.getCellData(REG_SHEET, 1, 6);
         String ssn       = ExcelUtils.getCellData(REG_SHEET, 1, 7);
 //        String username = ExcelUtils.getCellData(REG_SHEET, 1, 8) + System.currentTimeMillis();
-        String username = "Shubhs";
+        String username = "Shubhs" + System.currentTimeMillis();
         String password = ExcelUtils.getCellData(REG_SHEET, 1, 9);
         log.info("Test data loaded successfully");
         log.info("Registering user: {}", username);
