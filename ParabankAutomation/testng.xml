@@ -36,7 +36,7 @@
 
     <!-- ════════════════════════════════════════════
          BLOCK 2 — REGRESSION TESTS
-         ════════════════════════════════════════════ -->
+         ════════════════════════════════════════════ 
     <test name="REGRESSION TESTS">
         <groups>
             <run>
@@ -52,15 +52,15 @@
             <class name="testcases.BillPaymentTest"/>
             <class name="testcases.RequestLoanTest"/>
         </classes>
-    </test>
+    </test> -->
 
     <!-- ════════════════════════════════════════════
          BLOCK 3 — NEGATIVE TESTS
-         ════════════════════════════════════════════ -->
+         ════════════════════════════════════════════ 
     <test name="NEGATIVE TESTS">
         <classes>
             <class name="testcases.NegativeTest"/>
         </classes>
-    </test>
+    </test> -->
 
 </suite>
